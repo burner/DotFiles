@@ -27,6 +27,18 @@
 :set incsearch
 :set textwidth=78
 
+" Complete options (disable preview scratch window)
+:set completeopt=menu,menuone,longest
+" Limit popup menu height
+:set pumheight=15
+
+" SuperTab option for context aware completion
+let g:SuperTabDefaultCompletionType = "context"
+
+" Disable auto popup, use <Tab> to autocomplete
+let g:clang_complete_auto = 0
+let g:clang_use_library = 1
+
 autocmd FileType tex let loaded_matchparen = 0
 autocmd FileType cpp set cindent
 autocmd FileType d set cindent
@@ -41,28 +53,28 @@ autocmd FileType tex set nojoinspaces
 "au BufNewFile,BufRead,BufEnter *.cpp,*.hpp set omnifunc=omni#cpp#complete#Main
 
 " OmniCppComplete
-let OmniCpp_NamespaceSearch = 1
-let OmniCpp_GlobalScopeSearch = 1
-let OmniCpp_ShowAccess = 1
-let OmniCpp_ShowPrototypeInAbbr = 1 " show function parameters
-let OmniCpp_MayCompleteDot = 0 " autocomplete after .
-let OmniCpp_MayCompleteArrow = 0 " autocomplete after ->
-let OmniCpp_MayCompleteScope = 0 " autocomplete after ::
-let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]
+"let OmniCpp_NamespaceSearch = 1
+"let OmniCpp_GlobalScopeSearch = 1
+"let OmniCpp_ShowAccess = 1
+"let OmniCpp_ShowPrototypeInAbbr = 1 " show function parameters
+"let OmniCpp_MayCompleteDot = 0 " autocomplete after .
+"let OmniCpp_MayCompleteArrow = 0 " autocomplete after ->
+"let OmniCpp_MayCompleteScope = 0 " autocomplete after ::
+"let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]
 "" automatically open and close the popup menu / preview window
 "au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
 "set completeopt=menuone,menu,longest,preview
 
 filetype plugin on
-set ofu=syntaxcomplete#Complete
-set completeopt-=preview
-set completeopt+=menu
+"set ofu=syntaxcomplete#Complete
+"set completeopt-=preview
+"set completeopt+=menu
 
-function! UpdateTags()
-  execute ":!ctags -R --languages=C++ --c++-kinds=+p --fields=+iaS --extra=+q ./"
-  echohl StatusLine | echo "C/C++ tag updated" | echohl None
-endfunction
-nnoremap <F4> :call UpdateTags()
+"function! UpdateTags()
+"  execute ":!ctags -R --languages=C++ --c++-kinds=+p --fields=+iaS --extra=+q ./"
+"  echohl StatusLine | echo "C/C++ tag updated" | echohl None
+"endfunction
+"nnoremap <F4> :call UpdateTags()
 
 set runtimepath+=~/.vim/ultisnips_rep
 
