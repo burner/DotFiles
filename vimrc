@@ -15,6 +15,7 @@
 :nnoremap S :exec "normal a".nr2char(getchar())."\e"<CR>
 
 :nnoremap <C-s> :w<CR>
+:nnoremap <C-n> :w<CR> :!make<CR>
 :vnoremap <C-s> <C-c>:w<CR>
 :inoremap <C-s> <C-o>:w<CR><ESC>
 
