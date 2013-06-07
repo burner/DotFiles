@@ -26,7 +26,9 @@
 :map <c-s> :w<CR>
 
 :set incsearch
-:set textwidth=78
+:set tw=78
+
+:set fo+=t
 
 " Complete options (disable preview scratch window)
 :set completeopt=menu,menuone,longest
