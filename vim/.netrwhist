@@ -1,10 +1,2 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =8
-let g:netrw_dirhist_1='/home/burner/Source/middcir'
-let g:netrw_dirhist_2='/home/burner/teaching'
-let g:netrw_dirhist_3='/home/burner/.zsh'
-let g:netrw_dirhist_4='/home/burner/Source/simpleSnip'
-let g:netrw_dirhist_5='/home/burner/SVS/GutachtenReichel'
-let g:netrw_dirhist_6='/home/burner/.mutt'
-let g:netrw_dirhist_7='/home/burner/.zsh'
-let g:netrw_dirhist_8='/home/burner/SVS/teaching/Skripte/BS1/Skript-2013'
+let g:netrw_dirhist_cnt =0
