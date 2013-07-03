@@ -110,3 +110,5 @@ let g:UltiSnipsExpandTrigger="<C-p>"
 let g:UltiSnipsListSnippets="<C-o>"
 let g:UltiSnipsJumpForwardTrigger="<C-p>"
 let g:UltiSnipsJumpBackwardTrigger="<C-o>"
+
+set conceallevel=0
