@@ -112,3 +112,5 @@ let g:UltiSnipsJumpForwardTrigger="<C-p>"
 let g:UltiSnipsJumpBackwardTrigger="<C-o>"
 
 set conceallevel=0
+
+autocmd FileType gitcommit call setpos('.', [0, 1, 1, 0])
