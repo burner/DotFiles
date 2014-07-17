@@ -23,11 +23,11 @@
 :map <F6> <ESC>diwi\textbf{<ESC>pi<Right>}<ESC>
 :map <F3> <ESC>diwi\textsc{<ESC>pi<Right>}<ESC>
 
-:vmap  <expr>  <LEFT>   DVB_Drag('left') 
-:vmap  <expr>  <RIGHT>  DVB_Drag('right')
-:vmap  <expr>  <DOWN>   DVB_Drag('down') 
-:vmap  <expr>  <UP>     DVB_Drag('up')   
-:vmap  <expr>  D        DVB_Duplicate()  
+:vmap  <expr>  <c-j>  DVB_Drag('left') 
+:vmap  <expr>  <c-ö>  DVB_Drag('right')
+:vmap  <expr>  <c-l>  DVB_Drag('down') 
+:vmap  <expr>  <c-k>  DVB_Drag('up')   
+:vmap  <expr>  <c-d>  DVB_Duplicate()  
 
 :map <c-s> :w<CR>
 
