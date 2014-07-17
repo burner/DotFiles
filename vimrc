@@ -23,6 +23,12 @@
 :map <F6> <ESC>diwi\textbf{<ESC>pi<Right>}<ESC>
 :map <F3> <ESC>diwi\textsc{<ESC>pi<Right>}<ESC>
 
+:vmap  <expr>  <LEFT>   DVB_Drag('left') 
+:vmap  <expr>  <RIGHT>  DVB_Drag('right')
+:vmap  <expr>  <DOWN>   DVB_Drag('down') 
+:vmap  <expr>  <UP>     DVB_Drag('up')   
+:vmap  <expr>  D        DVB_Duplicate()  
+
 :map <c-s> :w<CR>
 
 :set incsearch
@@ -93,7 +99,6 @@ au BufWinEnter * silent! loadview
 "au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
 "set completeopt=menuone,menu,longest,preview
 
-filetype plugin on
 "set ofu=syntaxcomplete#Complete
 "set completeopt-=preview
 "set completeopt+=menu
@@ -104,7 +109,11 @@ filetype plugin on
 "endfunction
 "nnoremap <F4> :call UpdateTags()
 
-set runtimepath+=~/.vim/ultisnips_rep
+set runtimepath+=~/.vim/ultisnips_rep,~/Source/DCD/editors/vim/autoload,~/Source/DCD/editors/vim/ftplugin
+let g:dcd_importPath=['/usr/include/dlang/dmd','/usr/include/dlang/dmd/core','/usr/include/dlang/dmd/etc','/usr/include/dlang/dmd/std']
+
+filetype plugin on
+set omnifunc=dcomplete#Complete
 
 let g:UltiSnipsExpandTrigger="<C-p>"
 let g:UltiSnipsListSnippets="<C-o>"
@@ -114,3 +123,6 @@ let g:UltiSnipsJumpBackwardTrigger="<C-o>"
 set conceallevel=0
 
 autocmd FileType gitcommit call setpos('.', [0, 1, 1, 0])
+
+set foldmethod=manual
+set matchpairs+=<:> 

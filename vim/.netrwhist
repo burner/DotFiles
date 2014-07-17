@@ -1,5 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/home/burner/Source/Sandbox'
-let g:netrw_dirhist_2='/home/burner/SVS/argentinaNov2013/.git'
-let g:netrw_dirhist_3='/home/burner/.vim'
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/home/burner/SVS/IPosix/iposix/src/user/bin'
+let g:netrw_dirhist_2='/home/burner/SVS/GutachtenZiegler'
+let g:netrw_dirhist_3='/home/burner/.zsh'
+let g:netrw_dirhist_4='/home/burner/Source/Vim-Shorthand-Generator'
+let g:netrw_dirhist_5='/home/burner/.zsh'
