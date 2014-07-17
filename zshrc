@@ -68,3 +68,29 @@ alias vim="stty stop '' -ixoff ; vim"
 # `Frozing' tty, so after any command terminal settings will be restored
 ttyctl -f
 setxkbmap -option caps:escape
+
+autoload -U select-word-style
+select-word-style bash
+
+alias ...=../..
+alias ....=../../..
+alias .....=../../../..
+alias ur="git fetch upstream && git rebase upstream/master"
+
+# Git Alias
+alias g=git
+alias gl='git pull'
+alias gup='git pull --rebase'
+alias gt='git commit -a'
+alias gc='git checkout'
+alias gf='git fetch'
+alias gfu='git fetch upstream'
+alias gfo='git fetch origin'
+alias ga='git add'
+alias gr='git reset --hard'
+
+PATH=$PATH:/home/burner/Source/DCD/
+export PATH
+
+GCC_COLORS=auto
+export GCC_COLORS
