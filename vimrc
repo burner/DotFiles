@@ -27,7 +27,7 @@
 :vmap  <expr>  <c-ö>  DVB_Drag('right')
 :vmap  <expr>  <c-l>  DVB_Drag('down') 
 :vmap  <expr>  <c-k>  DVB_Drag('up')   
-:vmap  <expr>  <c-d>  DVB_Duplicate()  
+:vmap  <expr>  <c-c>  DVB_Duplicate()  
 
 :map <c-s> :w<CR>
 

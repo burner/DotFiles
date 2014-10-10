@@ -1,1 +1,0 @@
-/home/burner/.vim/ultisnips_rep/ftdetect/snippets.vim
