@@ -94,5 +94,5 @@ set matchpairs+=<:>
 
 " UlitSnips
 let g:UltiSnipsExpandTrigger="<c-n>"
-let g:UltiSnipsJumpForwardTrigger="<c-ö>"
-let g:UltiSnipsJumpBackwardTrigger="<c-j>"
+let g:UltiSnipsJumpForwardTrigger="<c-l>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
