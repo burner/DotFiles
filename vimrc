@@ -1,3 +1,5 @@
+call pathogen#infect()
+
 :syntax on
 :set encoding=utf-8
 :set number
@@ -22,12 +24,6 @@
 :map <F5> <ESC>diwi\emph{<ESC>pi<Right>}<ESC>
 :map <F6> <ESC>diwi\textbf{<ESC>pi<Right>}<ESC>
 :map <F3> <ESC>diwi\textsc{<ESC>pi<Right>}<ESC>
-
-:vmap  <expr>  <c-j>  DVB_Drag('left') 
-:vmap  <expr>  <c-ö>  DVB_Drag('right')
-:vmap  <expr>  <c-l>  DVB_Drag('down') 
-:vmap  <expr>  <c-k>  DVB_Drag('up')   
-:vmap  <expr>  <c-c>  DVB_Duplicate()  
 
 :map <c-s> :w<CR>
 
@@ -69,7 +65,6 @@ let g:clang_conceal_snippets=1
 let g:clang_snippets_engine='clang_complete'
 
 
-
 autocmd FileType tex let loaded_matchparen = 0
 autocmd FileType cpp set cindent
 autocmd FileType d set cindent
@@ -84,41 +79,11 @@ autocmd FileType tex set nojoinspaces
 au BufWinLeave * silent! mkview
 au BufWinEnter * silent! loadview
 
-"au BufNewFile,BufRead,BufEnter *.cpp,*.hpp set omnifunc=omni#cpp#complete#Main
-
-" OmniCppComplete
-"let OmniCpp_NamespaceSearch = 1
-"let OmniCpp_GlobalScopeSearch = 1
-"let OmniCpp_ShowAccess = 1
-"let OmniCpp_ShowPrototypeInAbbr = 1 " show function parameters
-"let OmniCpp_MayCompleteDot = 0 " autocomplete after .
-"let OmniCpp_MayCompleteArrow = 0 " autocomplete after ->
-"let OmniCpp_MayCompleteScope = 0 " autocomplete after ::
-"let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]
-"" automatically open and close the popup menu / preview window
-"au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
-"set completeopt=menuone,menu,longest,preview
-
-"set ofu=syntaxcomplete#Complete
-"set completeopt-=preview
-"set completeopt+=menu
-
-"function! UpdateTags()
-"  execute ":!ctags -R --languages=C++ --c++-kinds=+p --fields=+iaS --extra=+q ./"
-"  echohl StatusLine | echo "C/C++ tag updated" | echohl None
-"endfunction
-"nnoremap <F4> :call UpdateTags()
-
 set runtimepath+=~/.vim/ultisnips_rep,~/Source/DCD/editors/vim/autoload,~/Source/DCD/editors/vim/ftplugin
 let g:dcd_importPath=['/usr/include/dlang/dmd','/usr/include/dlang/dmd/core','/usr/include/dlang/dmd/etc','/usr/include/dlang/dmd/std']
 
 filetype plugin on
 set omnifunc=dcomplete#Complete
-
-let g:UltiSnipsExpandTrigger="<C-p>"
-let g:UltiSnipsListSnippets="<C-o>"
-let g:UltiSnipsJumpForwardTrigger="<C-p>"
-let g:UltiSnipsJumpBackwardTrigger="<C-o>"
 
 set conceallevel=0
 
@@ -126,3 +91,8 @@ autocmd FileType gitcommit call setpos('.', [0, 1, 1, 0])
 
 set foldmethod=manual
 set matchpairs+=<:> 
+
+" UlitSnips
+let g:UltiSnipsExpandTrigger="<c-n>"
+let g:UltiSnipsJumpForwardTrigger="<c-ö>"
+let g:UltiSnipsJumpBackwardTrigger="<c-j>"
