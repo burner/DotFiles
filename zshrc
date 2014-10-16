@@ -74,7 +74,7 @@ alias ll='ls --color=auto -alh'
 # prompt
 PROMPT='[%n@%M %.]$ '
 
-source /home/burner/.zshenv
+#source /home/burner/.zshenv
 #source /home/burner/.upsman/etc/profile
 
 #PATH=$PATH:/home/burner/bin:/home/burner/.upsman/bin
