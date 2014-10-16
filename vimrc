@@ -96,3 +96,11 @@ set matchpairs+=<:>
 let g:UltiSnipsExpandTrigger="<c-n>"
 let g:UltiSnipsJumpForwardTrigger="<c-l>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+
+hi link EasyMotionTarget ErrorMsg
+hi link EasyMotionTarget2First ErrorMsg
+hi link EasyMotionTarget2Second ErrorMsg
+hi link EasyMotionShade  Comment
+
+"hi link EasyMotionTarget2First MatchParen
+"hi link EasyMotionTarget2Second MatchParen
