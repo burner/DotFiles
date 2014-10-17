@@ -49,7 +49,7 @@ let g:clang_complete_patterns=0
 " Limit memory use
 let g:clang_memory_percent=70
 " Remove -std=c++11 if you don't use C++ for everything like I do.
-let g:clang_user_options=' -std=c++11 -I/home/burner/sweet.hpp -I. -I./include -I./includes || exit 0'
+let g:clang_user_options=' -std=c++11 -I/home/burner/Source/sweet.hpp -I. -I./include -I./includes || exit 0'
 " Set this to 0 if you don't want autoselect, 1 if you want autohighlight,
 " and 2 if you want autoselect. 0 will make you arrow down to select the first
 " option, 1 will select the first option for you, but won't insert it unless you
@@ -62,7 +62,7 @@ set concealcursor=vin
 let g:clang_snippets=1
 let g:clang_conceal_snippets=1
 " The single one that works with clang_complete
-let g:clang_snippets_engine='clang_complete'
+let g:clang_snippets_engine='ultisnips'
 
 
 autocmd FileType tex let loaded_matchparen = 0
