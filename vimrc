@@ -65,6 +65,7 @@ let g:clang_conceal_snippets=1
 let g:clang_snippets_engine='ultisnips'
 
 autocmd FileType tex let loaded_matchparen = 0
+autocmd FileType tex set cindent
 autocmd FileType cpp set cindent
 autocmd FileType d set cindent
 autocmd FileType cpp set shiftwidth=4
