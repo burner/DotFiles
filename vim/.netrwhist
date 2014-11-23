@@ -1,3 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_cnt =4
 let g:netrw_dirhist_1='/home/burner/Workspace/writecorrect/queequeg-0.91'
+let g:netrw_dirhist_2='/home/burner/Workspace/g2log/test_main'
+let g:netrw_dirhist_3='/home/burner/Workspace/g2log/g2log'
+let g:netrw_dirhist_4='/home/burner/Workspace/g2log/g2log/test_performance'

@@ -37,25 +37,24 @@ call pathogen#infect()
 " Limit popup menu height
 :set pumheight=15
 
-" SuperTab option for context aware completion
-"let g:SuperTabDefaultCompletionType = "context"
-
 " Clang Complete Settings
-let g:clang_use_library=1
+"let g:clang_use_library=1
 " if there's an error, allow us to see it
+let g:clang_complete_auto=0
 let g:clang_complete_copen=1
-let g:clang_complete_macros=1
-let g:clang_complete_patterns=0
+"let g:clang_complete_macros=1
+"let g:clang_complete_patterns=0
 " Limit memory use
-let g:clang_memory_percent=70
+"let g:clang_memory_percent=70
 " Remove -std=c++11 if you don't use C++ for everything like I do.
 let g:clang_user_options=' -std=c++11 -I/home/burner/Source/sweet.hpp -I. -I./include -I./includes || exit 0'
+"let g:clang_user_options='|| exit 0'
 " Set this to 0 if you don't want autoselect, 1 if you want autohighlight,
 " and 2 if you want autoselect. 0 will make you arrow down to select the first
 " option, 1 will select the first option for you, but won't insert it unless you
 " press enter. 2 will automatically insert what it thinks is right. 1 is the most
 " convenient IMO, and it defaults to 0.
-let g:clang_auto_select=1
+"let g:clang_auto_select=1
 
 set conceallevel=2
 set concealcursor=vin
