@@ -106,3 +106,5 @@ hi link EasyMotionShade  Comment
 "let g:EasyMotion_smartcase = 1
 "map <Leader>l <Plug>(easymotion-j)
 "map <Leader>k <Plug>(easymotion-k)
+
+autocmd FileType dt set filetype=jade
