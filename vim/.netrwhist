@@ -1,6 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/home/burner/SVS/Teaching'
-let g:netrw_dirhist_2='/home/burner/SVS/Teaching/Aufgaben'
-let g:netrw_dirhist_3='/home/burner/SVS/Teaching/Aufgaben/BS2'
-let g:netrw_dirhist_4='/home/burner/SVS/Teaching/Aufgaben/BS2/Uebung'
