@@ -110,6 +110,7 @@ alias gr='git reset --hard'
 alias gb='git branch'
 alias ge='git rebase'
 alias gh='git rebase -i HEAD~'
+alias gfr='git fetch --all && git reset --hard upstream/master'
 
 PATH=$PATH:/home/burner/bin:/home/burner/Source/Dscanner/Dscanner/
 export PATH
