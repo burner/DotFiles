@@ -25,7 +25,9 @@ call pathogen#infect()
 :map <F6> <ESC>diwi\textbf{<ESC>pi<Right>}<ESC>
 :map <F3> <ESC>diwi\textsc{<ESC>pi<Right>}<ESC>
 
-:source ~/Source/writecorret/writecorrect.vim
+:if !empty(glob("~/Source/writecorret/writecorrect.vim"))
+	:source ~/Source/writecorret/writecorrect.vim
+:endif
 :map <F8> :call WriteCorrect("speech")<CR>
 :map <F9> :call WriteCorrect("check")<CR>
 
