@@ -67,7 +67,7 @@ set concealcursor=vin
 let g:clang_snippets=1
 let g:clang_conceal_snippets=1
 " The single one that works with clang_complete
-let g:clang_snippets_engine='ultisnips'
+let g:clang_snippets_engine='clang_complete'
 
 autocmd FileType tex let loaded_matchparen = 0
 autocmd FileType tex set cindent
@@ -84,11 +84,7 @@ autocmd FileType tex set nojoinspaces
 au BufWinLeave * silent! mkview
 au BufWinEnter * silent! loadview
 
-set runtimepath+=~/.vim/ultisnips_rep,~/Source/DCD/editors/vim/autoload,~/Source/DCD/editors/vim/ftplugin
-let g:dcd_importPath=['/usr/include/dlang/dmd','/usr/include/dlang/dmd/core','/usr/include/dlang/dmd/etc','/usr/include/dlang/dmd/std']
-
 filetype plugin on
-set omnifunc=dcomplete#Complete
 
 set conceallevel=0
 
@@ -98,9 +94,11 @@ set foldmethod=manual
 set matchpairs+=<:> 
 
 " UlitSnips
+let g:UltiSnipsSnippetDirectories=["UltiSnips"]
 let g:UltiSnipsExpandTrigger="<c-n>"
 let g:UltiSnipsJumpForwardTrigger="<c-l>"
-let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+let g:UltniSnipsJumpBackwardTrigger="<c-k>"
+let g:UltiSnipsListSnippets="<c-p>"
 
 " EasyMotion
 hi link EasyMotionTarget ErrorMsg
@@ -114,3 +112,7 @@ hi link EasyMotionShade  Comment
 "map <Leader>k <Plug>(easymotion-k)
 
 autocmd FileType dt set filetype=jade
+
+set runtimepath+=~/.vim/bundle/vim-snippets/,~/Source/DCD/editors/vim/autoload,~/Source/DCD/editors/vim/ftplugin
+let g:dcd_importPath=['/usr/include/dlang/dmd','/usr/include/dlang/dmd/core','/usr/include/dlang/dmd/etc','/usr/include/dlang/dmd/std']
+autocmd FileType d set omnifunc=dcomplete#Complete
