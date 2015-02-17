@@ -81,6 +81,10 @@ autocmd FileType tex set spell
 autocmd FileType tex set spelllang=de,en
 autocmd FileType tex set nojoinspaces
 
+if filereadable(glob("~/DotFiles/vimabbrv")) 
+    source ~/DotFiles/vimabbrv
+endif
+
 au BufWinLeave * silent! mkview
 au BufWinEnter * silent! loadview
 
