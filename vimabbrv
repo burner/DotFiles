@@ -1,3 +1,4 @@
 :iab RWs read- and write-quorums
 :iab RWa read- and write-availability
+:iab RWo read- and write-operations
 :iab VHp vertical and horizontal paths
