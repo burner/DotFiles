@@ -114,7 +114,7 @@ alias gr='git reset --hard'
 alias gt='git commit -a'
 alias gup='git pull --rebase'
 
-PATH=$PATH:/home/burner/bin:/home/burner/Source/Dscanner/Dscanner/
+PATH=$PATH:/home/burner/bin:/home/burner/Source/DCD/bin
 export PATH
 
 GCC_COLORS=auto

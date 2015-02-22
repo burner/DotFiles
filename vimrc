@@ -88,6 +88,11 @@ endif
 au BufWinLeave * silent! mkview
 au BufWinEnter * silent! loadview
 
+set runtimepath+=~/.vim/ultisnips_rep,~/Source/DCD/editors/vim/autoload,~/Source/DCD/editors/vim/ftplugin
+let g:dcd_importPath=['/usr/include/dlang/dmd','/usr/include/dlang/dmd/core','/usr/include/dlang/dmd/etc','/usr/include/dlang/dmd/std']
+
+source ~/Source/DCD/editors/vim/autoload/dcomplete.vim
+
 filetype plugin on
 
 set conceallevel=0
