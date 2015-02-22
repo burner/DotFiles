@@ -88,7 +88,6 @@ endif
 au BufWinLeave * silent! mkview
 au BufWinEnter * silent! loadview
 
-set runtimepath+=~/.vim/ultisnips_rep,~/Source/DCD/editors/vim/autoload,~/Source/DCD/editors/vim/ftplugin
 let g:dcd_importPath=['/usr/include/dlang/dmd','/usr/include/dlang/dmd/core','/usr/include/dlang/dmd/etc','/usr/include/dlang/dmd/std']
 
 source ~/Source/DCD/editors/vim/autoload/dcomplete.vim
@@ -125,3 +124,6 @@ autocmd FileType dt set filetype=jade
 set runtimepath+=~/.vim/bundle/vim-snippets/,~/Source/DCD/editors/vim/autoload,~/Source/DCD/editors/vim/ftplugin
 let g:dcd_importPath=['/usr/include/dlang/dmd','/usr/include/dlang/dmd/core','/usr/include/dlang/dmd/etc','/usr/include/dlang/dmd/std']
 autocmd FileType d set omnifunc=dcomplete#Complete
+let g:user_emmet_install_global = 1
+let g:user_emmet_indentation='\t'
+autocmd FileType html,css EmmetInstall
