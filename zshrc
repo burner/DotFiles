@@ -98,19 +98,21 @@ alias ur="git fetch upstream && git rebase upstream/master"
 
 # Git Alias
 alias g=git
-alias gl='git pull'
-alias gup='git pull --rebase'
-alias gt='git commit -a'
-alias gc='git checkout'
-alias gf='git fetch'
-alias gfu='git fetch upstream'
-alias gfo='git fetch origin'
 alias ga='git add'
-alias gr='git reset --hard'
 alias gb='git branch'
+alias gc='git checkout'
 alias ge='git rebase'
-alias gh='git rebase -i HEAD~'
+alias gf='git fetch'
+alias gfo='git fetch origin'
 alias gfr='git fetch --all && git reset --hard upstream/master'
+alias gfu='git fetch upstream'
+alias gh='git rebase -i HEAD~'
+alias gl='git pull'
+alias glo='git pull --rebase origin master'
+alias gpo='git push --rebase origin master'
+alias gr='git reset --hard'
+alias gt='git commit -a'
+alias gup='git pull --rebase'
 
 PATH=$PATH:/home/burner/bin:/home/burner/Source/Dscanner/Dscanner/
 export PATH
