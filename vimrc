@@ -92,7 +92,11 @@ au BufWinEnter * silent! loadview
 
 let g:dcd_importPath=['/usr/include/dlang/dmd','/usr/include/dlang/dmd/core','/usr/include/dlang/dmd/etc','/usr/include/dlang/dmd/std']
 
-source ~/Source/DCD/editors/vim/autoload/dcomplete.vim
+:if !empty(glob("~/Source/DCD/editors/vim/autoload/dcomplete.vim"))
+	:source ~/Source/DCD/editors/vim/autoload/dcomplete.vim
+:elseif !empty(glob("~/workspace/DCD/editors/vim/autoload/dcomplete.vim"))
+	:source ~/workspace/DCD/editors/vim/autoload/dcomplete.vim
+:endif
 
 filetype plugin on
 
