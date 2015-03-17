@@ -38,6 +38,8 @@ call pathogen#infect()
 
 :set fo+=t
 
+:let g:tex_flavor='latex'
+
 " Complete options (disable preview scratch window)
 :set completeopt=menu,menuone,longest
 " Limit popup menu height
@@ -127,3 +129,6 @@ autocmd FileType d set omnifunc=dcomplete#Complete
 let g:user_emmet_install_global = 1
 let g:user_emmet_indentation='\t'
 autocmd FileType html,css EmmetInstall
+
+" Auto closing character
+autocmd FileType javascript,c,cpp,d inoremap {<CR> {<CR>}<Esc><S-o>
