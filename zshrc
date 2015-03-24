@@ -113,6 +113,7 @@ alias gpo='git push origin master'
 alias gr='git reset --hard'
 alias gt='git commit -a'
 alias gup='git pull --rebase'
+alias gp='git push'
 
 PATH=$PATH:/home/burner/bin:/home/burner/Source/DCD/bin
 export PATH
