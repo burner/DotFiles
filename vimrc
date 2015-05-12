@@ -131,8 +131,8 @@ autocmd FileType dt set filetype=jade
 
 let g:dcd_importPath=['/usr/include/dlang/dmd','/usr/include/dlang/dmd/core','/usr/include/dlang/dmd/etc','/usr/include/dlang/dmd/std']
 autocmd FileType d set omnifunc=dcomplete#Complete
-let g:user_emmet_install_global = 1
-let g:user_emmet_indentation='\t'
+"let g:user_emmet_install_global = 1
+"let g:user_emmet_indentation='\t'
 
 " Auto closing character
 autocmd FileType javascript,c,cpp,d inoremap {<CR> {<CR>}<Esc><S-o>
