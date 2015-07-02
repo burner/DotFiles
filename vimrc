@@ -1,6 +1,6 @@
-call pathogen#infect()
+execute pathogen#infect()
 
-set runtimepath+=~/.vim/bundle/vim-snippets/,~/Source/DCD/editors/vim/autoload,~/Source/DCD/editors/vim/ftplugin,~/.vim/mysnippets,~/.vim/bundle/ultisnips/
+set runtimepath+=~/.vim/bundle/vim-snippets/,~/.vim/mysnippets,~/.vim/bundle/ultisnips/,~/.vim/bundle/vim-dutyl
 
 :syntax on
 :set encoding=utf-8
@@ -92,13 +92,8 @@ endif
 au BufWinLeave * silent! mkview
 au BufWinEnter * silent! loadview
 
-let g:dcd_importPath=['/usr/include/dlang/dmd','/usr/include/dlang/dmd/core','/usr/include/dlang/dmd/etc','/usr/include/dlang/dmd/std']
-
-:if !empty(glob("~/Source/DCD/editors/vim/autoload/dcomplete.vim"))
-	:source ~/Source/DCD/editors/vim/autoload/dcomplete.vim
-:elseif !empty(glob("~/workspace/DCD/editors/vim/autoload/dcomplete.vim"))
-	:source ~/workspace/DCD/editors/vim/autoload/dcomplete.vim
-:endif
+let g:dutyl_stdImportPaths=['/usr/include/dlang/dmd']
+let g:dutyl_neverAddClosingParen=1
 
 filetype plugin on
 
@@ -128,11 +123,6 @@ hi link EasyMotionShade  Comment
 "map <Leader>k <Plug>(easymotion-k)
 
 autocmd FileType dt set filetype=jade
-
-let g:dcd_importPath=['/usr/include/dlang/dmd','/usr/include/dlang/dmd/core','/usr/include/dlang/dmd/etc','/usr/include/dlang/dmd/std']
-autocmd FileType d set omnifunc=dcomplete#Complete
-"let g:user_emmet_install_global = 1
-"let g:user_emmet_indentation='\t'
 
 " Auto closing character
 autocmd FileType javascript,c,cpp,d inoremap {<CR> {<CR>}<Esc><S-o>

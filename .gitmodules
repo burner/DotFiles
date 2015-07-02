@@ -19,3 +19,6 @@
 [submodule "vim/bundle/ansi-esc"]
 	path = vim/bundle/ansi-esc
 	url = https://github.com/vim-scripts/AnsiEsc.vim.git
+[submodule "vim/bundle/vim-dutyl"]
+	path = vim/bundle/vim-dutyl
+	url = git@github.com:idanarye/vim-dutyl.git
