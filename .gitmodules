@@ -22,3 +22,6 @@
 [submodule "vim/bundle/vim-dutyl"]
 	path = vim/bundle/vim-dutyl
 	url = git@github.com:idanarye/vim-dutyl.git
+[submodule "vim/bundle/editorconfig-vim"]
+	path = vim/bundle/editorconfig-vim
+	url = git@github.com:editorconfig/editorconfig-vim.git
