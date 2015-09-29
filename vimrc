@@ -1,6 +1,30 @@
-execute pathogen#infect()
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim/
+call vundle#rc()
 
-set runtimepath+=~/.vim/bundle/vim-snippets/,~/.vim/mysnippets,~/.vim/bundle/ultisnips/,~/.vim/bundle/vim-dutyl
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" clang complate: c++ auto completion
+Plugin 'Rip-Rip/clang_complete.git'
+
+" command-t: fuzzy file finder
+Plugin 'wincent/Command-T'
+
+" ultisnips: shortcut text generation
+Plugin 'SirVer/ultisnips'
+
+" ultisnips snippets: predefined snippets
+Plugin 'honza/vim-snippets'
+
+" easymotion: moving around fast
+Plugin 'easymotion/vim-easymotion'
+
+call vundle#end()
+filetype plugin indent on
+
+set runtimepath+=~/.vim/mysnippets
 
 :syntax on
 :set encoding=utf-8
@@ -33,6 +57,7 @@ set runtimepath+=~/.vim/bundle/vim-snippets/,~/.vim/mysnippets,~/.vim/bundle/ult
 :map <F8> :call WriteCorrect("speech")<CR>
 :map <F9> :call WriteCorrect("check")<CR>
 
+" Ctrl-s saves the current file
 :map <c-s> :w<CR>
 
 :set incsearch
@@ -89,13 +114,11 @@ if filereadable(glob("~/DotFiles/vimabbrv"))
     source ~/DotFiles/vimabbrv
 endif
 
-au BufWinLeave * silent! mkview
-au BufWinEnter * silent! loadview
-
+"au BufWinLeave * silent! mkview
+"au BufWinEnter * silent! loadview
+"
 let g:dutyl_stdImportPaths=['/usr/include/dlang/dmd']
 let g:dutyl_neverAddClosingParen=1
-
-filetype plugin on
 
 set conceallevel=0
 
@@ -117,12 +140,12 @@ hi link EasyMotionTarget2First ErrorMsg
 hi link EasyMotionTarget2Second ErrorMsg
 hi link EasyMotionShade  Comment
 
-"nmap s <Plug>(easymotion-s)
-"let g:EasyMotion_smartcase = 1
-"map <Leader>l <Plug>(easymotion-j)
-"map <Leader>k <Plug>(easymotion-k)
+nmap s <Plug>(easymotion-s)
+let g:EasyMotion_smartcase = 1
+map <Leader>l <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
 
 autocmd FileType dt set filetype=jade
 
 " Auto closing character
-autocmd FileType javascript,c,cpp,d inoremap {<CR> {<CR>}<Esc><S-o>
+autocmd FileType javascript,c,scad,cpp,hpp,d inoremap {<CR> {<CR>}<Esc><S-o>
