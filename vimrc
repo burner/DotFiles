@@ -1,3 +1,4 @@
+":let g:EasyMotion_do_mapping=0
 set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim/
@@ -21,6 +22,9 @@ Plugin 'honza/vim-snippets'
 " easymotion: moving around fast
 Plugin 'easymotion/vim-easymotion'
 
+" editorconfig: editor config files configure vim to a specific project
+Plugin 'editorconfig/editorconfig-vim'
+
 call vundle#end()
 filetype plugin indent on
 
@@ -38,9 +42,6 @@ set runtimepath+=~/.vim/mysnippets
 
 :map <c-k> gT
 :map <c-l> gt
-
-:nnoremap s :exec "normal i".nr2char(getchar())."\e"<CR>
-:nnoremap S :exec "normal a".nr2char(getchar())."\e"<CR>
 
 :nnoremap <C-s> :w<CR>
 :nnoremap <C-n> :w<CR> :!make<CR>
@@ -149,3 +150,7 @@ autocmd FileType dt set filetype=jade
 
 " Auto closing character
 autocmd FileType javascript,c,scad,cpp,hpp,d inoremap {<CR> {<CR>}<Esc><S-o>
+
+:nmap s :exec "normal i".nr2char(getchar())."\e"<CR>
+:nmap S :exec "normal a".nr2char(getchar())."\e"<CR>
+
