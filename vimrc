@@ -21,6 +21,9 @@ Plugin 'honza/vim-snippets'
 
 " easymotion: moving around fast
 Plugin 'easymotion/vim-easymotion'
+"
+" amber language: amber language support
+Plugin 'burner/amber.vim'
 
 " editorconfig: editor config files configure vim to a specific project
 Plugin 'editorconfig/editorconfig-vim'
@@ -154,3 +157,4 @@ autocmd FileType javascript,c,scad,cpp,hpp,d inoremap {<CR> {<CR>}<Esc><S-o>
 :nmap s :exec "normal i".nr2char(getchar())."\e"<CR>
 :nmap S :exec "normal a".nr2char(getchar())."\e"<CR>
 
+autocmd FileType am set autoindent
