@@ -83,7 +83,7 @@ SVN_EDITOR=vim
 export SVN_EDITOR
 ulimit -c unlimited
 
-alias vim="stty stop '' -ixoff ; vim"
+alias vim="stty stop '' -ixoff ; vim 2>/dev/null"
 # `Frozing' tty, so after any command terminal settings will be restored
 ttyctl -f
 setxkbmap -option caps:escape
