@@ -70,6 +70,7 @@ fi
 
 alias ls='ls --color=auto'
 alias ll='ls --color=auto -alh'
+alias lrt='ls --color=auto -alhrt'
 #alias thunar=' thunar `pwd`'
 # prompt
 PROMPT='[%n@%M %.]$ '

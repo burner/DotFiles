@@ -106,9 +106,11 @@ autocmd FileType tex let loaded_matchparen = 0
 let g:tex_flavor='latex'
 autocmd FileType cpp set cindent
 autocmd FileType d set cindent
+autocmd FileType java set cindent
 autocmd FileType cpp set shiftwidth=4
 autocmd FileType d set shiftwidth=4
 autocmd FileType tex set shiftwidth=4
+autocmd FileType java set shiftwidth=4
 
 autocmd FileType tex set spell
 autocmd FileType tex set spelllang=de,en
@@ -158,3 +160,5 @@ autocmd FileType javascript,c,scad,cpp,hpp,d inoremap {<CR> {<CR>}<Esc><S-o>
 :nmap S :exec "normal a".nr2char(getchar())."\e"<CR>
 
 autocmd FileType am set autoindent
+autocmd BufNewFile,BufRead *.am setfiletype amber
+autocmd! Syntax amber source $VIM/amber.vim
