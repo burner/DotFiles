@@ -162,3 +162,5 @@ autocmd FileType javascript,c,scad,cpp,hpp,d inoremap {<CR> {<CR>}<Esc><S-o>
 autocmd FileType am set autoindent
 autocmd BufNewFile,BufRead *.am setfiletype amber
 autocmd! Syntax amber source $VIM/amber.vim
+
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
