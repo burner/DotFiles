@@ -28,6 +28,9 @@ Plugin 'burner/amber.vim'
 " editorconfig: editor config files configure vim to a specific project
 Plugin 'editorconfig/editorconfig-vim'
 
+" Diet / Jade highlighting
+Plugin 'digitaltoad/vim-jade'
+
 call vundle#end()
 filetype plugin indent on
 
@@ -164,5 +167,6 @@ autocmd FileType javascript,c,scad,cpp,hpp,d inoremap {<CR> {<CR>}<Esc><S-o>
 autocmd FileType am set autoindent
 autocmd BufNewFile,BufRead *.am setfiletype amber
 autocmd! Syntax amber source $VIM/amber.vim
+autocmd BufNewFile,BufReadPost *.dt set filetype=jade
 
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
