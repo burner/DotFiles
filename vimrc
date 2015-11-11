@@ -146,6 +146,8 @@ hi link EasyMotionTarget2First ErrorMsg
 hi link EasyMotionTarget2Second ErrorMsg
 hi link EasyMotionShade  Comment
 
+:nmap h <Plug>(easymotion-prefix)
+
 nmap s <Plug>(easymotion-s)
 let g:EasyMotion_smartcase = 1
 map <Leader>l <Plug>(easymotion-j)
