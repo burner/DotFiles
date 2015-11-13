@@ -34,6 +34,9 @@ Plugin 'digitaltoad/vim-jade'
 " typescript 
 Plugin 'leafgarland/typescript-vim'
 
+" Dutyl dcd binding
+Plugin 'idanarye/vim-dutyl'
+
 call vundle#end()
 filetype plugin indent on
 
