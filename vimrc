@@ -31,6 +31,9 @@ Plugin 'editorconfig/editorconfig-vim'
 " Diet / Jade highlighting
 Plugin 'digitaltoad/vim-jade'
 
+" typescript 
+Plugin 'leafgarland/typescript-vim'
+
 call vundle#end()
 filetype plugin indent on
 
