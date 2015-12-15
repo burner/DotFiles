@@ -67,13 +67,14 @@ if (( ${+terminfo[smkx]} )) && (( ${+terminfo[rmkx]} )); then
     zle -N zle-line-finish
 fi
 
+autoload -U colors && colors
 
 alias ls='ls --color=auto'
 alias ll='ls --color=auto -alh'
 alias lrt='ls --color=auto -alhrt'
 #alias thunar=' thunar `pwd`'
 # prompt
-PROMPT='[%n@%M %.]$ '
+PS1="[%{$fg[red]%}%n%{$reset_color%}@%{$fg[blue]%}%M%{$reset_color%} %.]$ "
 
 #source /home/burner/.zshenv
 #source /home/burner/.upsman/etc/profile
