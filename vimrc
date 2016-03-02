@@ -37,6 +37,12 @@ Plugin 'leafgarland/typescript-vim'
 " Dutyl dcd binding
 Plugin 'idanarye/vim-dutyl'
 
+" Dart Language binding
+Plugin 'dart-lang/dart-vim-plugin'
+
+" Typescript Language binding
+Plugin 'Quramy/tsuquyomi'
+
 call vundle#end()
 filetype plugin indent on
 
@@ -119,6 +125,9 @@ autocmd FileType java set cindent
 autocmd FileType cpp set shiftwidth=4
 autocmd FileType d set shiftwidth=4
 autocmd FileType tex set shiftwidth=4
+autocmd FileType dt set shiftwidth=4
+autocmd FileType js set shiftwidth=4
+autocmd FileType ts set shiftwidth=4
 autocmd FileType java set shiftwidth=4
 
 autocmd FileType tex set spell
