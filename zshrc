@@ -93,10 +93,12 @@ setxkbmap -option caps:escape
 autoload -U select-word-style
 select-word-style bash
 
+# Helpful aliases
+
 alias ...=../..
 alias ....=../../..
 alias .....=../../../..
-alias ur="git fetch upstream && git rebase upstream/master"
+alias grepr='grep -R'
 
 # Git Alias
 alias g=git
