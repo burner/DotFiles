@@ -123,6 +123,7 @@ autocmd FileType cpp set cindent
 autocmd FileType d set cindent
 autocmd FileType java set cindent
 autocmd FileType cpp set shiftwidth=4
+autocmd FileType yaml set shiftwidth=4
 autocmd FileType d set shiftwidth=4
 autocmd FileType tex set shiftwidth=4
 autocmd FileType dt set shiftwidth=4
