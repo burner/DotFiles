@@ -43,6 +43,9 @@ Plugin 'dart-lang/dart-vim-plugin'
 " Typescript Language binding
 Plugin 'Quramy/tsuquyomi'
 
+" async vim
+Plugin 'Shougo/vimproc'
+
 call vundle#end()
 filetype plugin indent on
 
@@ -186,3 +189,5 @@ autocmd! Syntax amber source $VIM/amber.vim
 autocmd BufNewFile,BufReadPost *.dt set filetype=jade
 
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
+let g:tsuquyomi_disable_quickfix = 1
