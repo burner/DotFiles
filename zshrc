@@ -100,7 +100,7 @@ alias ....=../../..
 alias .....=../../../..
 alias grepr='grep -R'
 
-# Git Alias
+# Git Aliases
 alias g=git
 alias ga='git add'
 alias gb='git branch'
@@ -113,6 +113,9 @@ alias glu='git pull --rebase upstream master'
 alias gp='git push'
 alias gr='git reset --hard'
 alias gt='git commit -a'
+
+# Task Warrior Aliases
+alias t=task
 
 PATH=$PATH:/home/burner/bin:/home/burner/Source/DCD/bin
 export PATH
