@@ -135,7 +135,6 @@ autocmd FileType ts set shiftwidth=4
 autocmd FileType java set shiftwidth=4
 
 autocmd FileType tex set spell
-autocmd FileType tex set syntax spell toplevel
 autocmd FileType tex set spelllang=de,en
 autocmd FileType tex set nojoinspaces
 autocmd FileType tex setl noai nocin nosi inde=
