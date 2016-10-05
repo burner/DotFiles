@@ -46,6 +46,12 @@ Plugin 'Quramy/tsuquyomi'
 " async vim
 Plugin 'Shougo/vimproc'
 
+" Surround
+Plugin 'git@github.com:tpope/vim-surround.git'
+
+" Repeat : to make Surround repeatable
+Plugin 'git@github.com:tpope/vim-repeat.git'
+
 call vundle#end()
 filetype plugin indent on
 
