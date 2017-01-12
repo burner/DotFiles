@@ -138,6 +138,7 @@ autocmd FileType tex set shiftwidth=4
 autocmd FileType dt set shiftwidth=4
 autocmd FileType js set shiftwidth=4
 autocmd FileType ts set shiftwidth=4
+autocmd FileType go set shiftwidth=4
 autocmd FileType java set shiftwidth=4
 
 autocmd FileType tex set spell
