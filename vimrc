@@ -201,3 +201,7 @@ autocmd BufNewFile,BufReadPost *.dt set filetype=jade
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 let g:tsuquyomi_disable_quickfix = 1
+
+" LaTeX is slow
+au FileType tex setlocal nocursorline
+au FileType tex :NoMatchParen
