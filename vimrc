@@ -37,20 +37,11 @@ Plugin 'leafgarland/typescript-vim'
 " Dutyl dcd binding
 Plugin 'idanarye/vim-dutyl'
 
-" Dart Language binding
-Plugin 'dart-lang/dart-vim-plugin'
-
 " Typescript Language binding
 Plugin 'Quramy/tsuquyomi'
 
 " async vim
 Plugin 'Shougo/vimproc'
-
-" Surround
-Plugin 'git@github.com:tpope/vim-surround.git'
-
-" Repeat : to make Surround repeatable
-Plugin 'git@github.com:tpope/vim-repeat.git'
 
 call vundle#end()
 filetype plugin indent on
@@ -179,11 +170,6 @@ hi link EasyMotionTarget2Second ErrorMsg
 hi link EasyMotionShade  Comment
 
 :nmap h <Plug>(easymotion-prefix)
-
-nmap s <Plug>(easymotion-s)
-let g:EasyMotion_smartcase = 1
-map <Leader>l <Plug>(easymotion-j)
-map <Leader>k <Plug>(easymotion-k)
 
 autocmd FileType dt set filetype=jade
 
