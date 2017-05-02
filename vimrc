@@ -7,6 +7,9 @@ call vundle#rc()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
+" vimproc
+Plugin 'Shougo/vimproc.vim'
+
 " clang complate: c++ auto completion
 Plugin 'Rip-Rip/clang_complete.git'
 
@@ -191,3 +194,6 @@ let g:tsuquyomi_disable_quickfix = 1
 " LaTeX is slow
 au FileType tex setlocal nocursorline
 au FileType tex :NoMatchParen
+
+" Commant-T exclude
+:set wildignore+=*.o,*.obj,*.lst,*.aux,*.pdf,*.out.*,*.subsets,*.data,*.eps
