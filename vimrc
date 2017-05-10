@@ -79,6 +79,9 @@ set runtimepath+=~/.vim/mysnippets
 :map <F8> :call WriteCorrect("speech")<CR>
 :map <F9> :call WriteCorrect("check")<CR>
 
+:source ~/DotFiles/vim/gentags.vim
+:map <F7> :call GenTags()<CR>
+
 " Ctrl-s saves the current file
 :map <c-s> :w<CR>
 
