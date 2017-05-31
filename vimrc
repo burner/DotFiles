@@ -61,8 +61,11 @@ set runtimepath+=~/.vim/mysnippets
 :map l <DOWN>
 :map ö <RIGHT>
 
+:nnoremap <S-k> :tabm +1<cr>
+:nnoremap <S-l> :tabm -1<cr>
 :map <c-k> gT
 :map <c-l> gt
+
 
 :nnoremap <C-s> :w<CR>
 :nnoremap <C-n> :w<CR> :!make<CR>
@@ -199,4 +202,6 @@ au FileType tex setlocal nocursorline
 au FileType tex :NoMatchParen
 
 " Commant-T exclude
-:set wildignore+=*.o,*.obj,*.lst,*.aux,*.pdf,*.out.*,*.subsets,*.data,*.eps
+:set wildignore+=*.o,*.obj,*.lst,*.aux,*.pdf,*.out.*,*.subsets,*.data,*.eps,*.rslt,*.gp
+
+:set mouse=a
