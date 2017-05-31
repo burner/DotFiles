@@ -61,8 +61,8 @@ set runtimepath+=~/.vim/mysnippets
 :map l <DOWN>
 :map ö <RIGHT>
 
-:nnoremap <S-k> :tabm +1<cr>
-:nnoremap <S-l> :tabm -1<cr>
+:nnoremap <S-k> :tabm -1<cr>
+:nnoremap <S-l> :tabm +1<cr>
 :map <c-k> gT
 :map <c-l> gt
 
