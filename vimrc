@@ -14,7 +14,7 @@ Plugin 'Rip-Rip/clang_complete.git'
 Plugin 'wincent/Command-T'
 
 " ultisnips: shortcut text generation
-"Plugin 'SirVer/ultisnips'
+Plugin 'SirVer/ultisnips'
 
 " ultisnips snippets: predefined snippets
 Plugin 'honza/vim-snippets'
