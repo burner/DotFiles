@@ -7,9 +7,6 @@ call vundle#rc()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-" vimproc
-Plugin 'Shougo/vimproc.vim'
-
 " clang complate: c++ auto completion
 Plugin 'Rip-Rip/clang_complete.git'
 
@@ -17,7 +14,7 @@ Plugin 'Rip-Rip/clang_complete.git'
 Plugin 'wincent/Command-T'
 
 " ultisnips: shortcut text generation
-Plugin 'SirVer/ultisnips'
+"Plugin 'SirVer/ultisnips'
 
 " ultisnips snippets: predefined snippets
 Plugin 'honza/vim-snippets'
@@ -44,7 +41,7 @@ Plugin 'idanarye/vim-dutyl'
 Plugin 'Quramy/tsuquyomi'
 
 " async vim
-Plugin 'Shougo/vimproc'
+"Plugin 'Shougo/vimproc'
 
 call vundle#end()
 filetype plugin indent on
