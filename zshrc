@@ -74,7 +74,7 @@ alias ll='ls --color=auto -alh'
 alias lrt='ls --color=auto -alhrt'
 #alias thunar=' thunar `pwd`'
 # prompt
-PS1="[%{$fg[red]%}%n%{$reset_color%}@%{$fg[blue]%}%m%{$reset_color%} %.]$ "
+PROMPT="[%{$fg[red]%}%n%{$reset_color%}@%{$fg[blue]%}%m%{$reset_color%} %.]$ "
 
 #source /home/burner/.zshenv
 #source /home/burner/.upsman/etc/profile
