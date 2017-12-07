@@ -1,4 +1,8 @@
 # Lines configured by zsh-newuser-install
+function newTerm() {
+    /usr/bin/alacritty --working-directory $PWD&disown
+}
+
 LANG=en_US.utf-8
 HISTFILE=~/.histfile
 HISTSIZE=1000
@@ -53,6 +57,10 @@ key[PageDown]=${terminfo[knp]}
 [[ -n "${key[PageDown]}" ]]  && bindkey  "${key[PageDown]}" end-of-buffer-or-history
 bindkey ';5D' emacs-backward-word
 bindkey ';5C' emacs-forward-word
+
+zle -N newTerm
+bindkey '^n' newTerm
+
 
 # Finally, make sure the terminal is in application mode, when zle is
 # active. Only then are the values from $terminfo valid.
@@ -123,3 +131,5 @@ export PATH
 
 GCC_COLORS=auto
 export GCC_COLORS
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
