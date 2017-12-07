@@ -40,6 +40,9 @@ Plugin 'idanarye/vim-dutyl'
 " Typescript Language binding
 Plugin 'Quramy/tsuquyomi'
 
+" Spell and Style checker
+Plugin 'davidbeckingsale/writegood.vim'
+
 " async vim
 "Plugin 'Shougo/vimproc'
 
@@ -108,6 +111,7 @@ let g:clang_complete_copen=1
 "let g:clang_memory_percent=70
 " Remove -std=c++11 if you don't use C++ for everything like I do.
 let g:clang_user_options=' -std=c++11 -I/home/burner/Source/sweet.hpp -I. -I./include -I./includes || exit 0'
+let g:clang_library_path='/usr/lib/'
 "let g:clang_user_options='|| exit 0'
 " Set this to 0 if you don't want autoselect, 1 if you want autohighlight,
 " and 2 if you want autoselect. 0 will make you arrow down to select the first
