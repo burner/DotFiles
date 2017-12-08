@@ -19,6 +19,10 @@ Plug 'zchee/deoplete-clang', { 'for' : 'cpp' }
 
 " completion:dlang
 Plug 'landaire/deoplete-d'
+
+" Editor config support
+Plug 'editorconfig/editorconfig-vim'
+
 call plug#end()
 
 
@@ -92,6 +96,9 @@ let g:deoplete#sources#clang#libclang_path = '/usr/lib/libclang.so'
 let g:deoplete#sources#clang#std#cpp = 'c++14'
 let g:deoplete#sources#clang#clang_header = '/usr/lib/clang'
 let g:deoplete#sources#clang#flags = [ "--std=c++14" ]
+
+" completion:dlang
+let g:deoplete#sources#d#dcd_server_autostart = 1
 
 " UltiSnips
 let g:UltiSnipsExpandTrigger="<c-p>"
