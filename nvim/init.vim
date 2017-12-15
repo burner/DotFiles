@@ -20,6 +20,9 @@ Plug 'zchee/deoplete-clang', { 'for' : 'cpp' }
 " completion:dlang
 Plug 'landaire/deoplete-d'
 
+" completion:typescript
+Plug 'mhartington/nvim-typescript'
+
 " Editor config support
 Plug 'editorconfig/editorconfig-vim'
 
