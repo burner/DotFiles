@@ -104,7 +104,7 @@ let g:deoplete#sources#clang#flags = [ "--std=c++14" ]
 let g:deoplete#sources#d#dcd_server_autostart = 1
 
 " UltiSnips
-let g:UltiSnipsExpandTrigger="<c-p>"
+let g:UltiSnipsExpandTrigger="<c-u>"
 let g:UltiSnipsListSnippets="<c-s-p>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
