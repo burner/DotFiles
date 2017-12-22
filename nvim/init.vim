@@ -21,10 +21,13 @@ Plug 'zchee/deoplete-clang', { 'for' : 'cpp' }
 Plug 'landaire/deoplete-d'
 
 " completion:typescript
-Plug 'mhartington/nvim-typescript'
+Plug 'mhartington/deoplete-typescript', { 'do': 'npm install typescript', 'for': 'typescript' }
 
 " Editor config support
 Plug 'editorconfig/editorconfig-vim'
+
+" Typescript syntax
+Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
 
 call plug#end()
 
