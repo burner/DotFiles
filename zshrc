@@ -3,7 +3,6 @@ function newTerm() {
     /usr/bin/alacritty --working-directory $PWD&disown
 }
 
-LANG=en_US.utf-8
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
@@ -122,12 +121,6 @@ alias glu='git pull --rebase upstream master'
 alias gp='git push'
 alias gr='git reset --hard'
 alias gt='git commit -a'
-
-# Task Warrior Aliases
-alias t=task
-
-PATH=$PATH:/home/burner/bin:/home/burner/Source/DCD/bin
-export PATH
 
 GCC_COLORS=auto
 export GCC_COLORS
