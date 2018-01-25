@@ -125,4 +125,5 @@ alias gt='git commit -a'
 GCC_COLORS=auto
 export GCC_COLORS
 
+setopt HIST_IGNORE_ALL_DUPS
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

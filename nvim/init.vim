@@ -111,3 +111,6 @@ let g:UltiSnipsExpandTrigger="<c-u>"
 let g:UltiSnipsListSnippets="<c-s-p>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" Clipboard
+set clipboard+=unnamedplus
