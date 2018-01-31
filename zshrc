@@ -86,8 +86,7 @@ PROMPT="[%{$fg[red]%}%n%{$reset_color%}@%{$fg[blue]%}%m%{$reset_color%} %.]$ "
 #source /home/burner/.zshenv
 #source /home/burner/.upsman/etc/profile
 
-#PATH=$PATH:/home/burner/bin:/home/burner/.upsman/bin
-export GOPATH=/home/burner/.golang
+PATH=$PATH:/home/burner/bin
 export PATH
 SVN_EDITOR=vim
 export SVN_EDITOR
