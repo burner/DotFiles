@@ -17,17 +17,17 @@ Plug 'Shougo/deoplete.nvim'
 " completion:c++
 Plug 'zchee/deoplete-clang', { 'for' : 'cpp' }
 
+" Typescript syntax
+ Plug 'leafgarland/typescript-vim'
+
+" completion:typescript
+Plug 'mhartington/nvim-typescript'
+
 " completion:dlang
 Plug 'landaire/deoplete-d'
 
-" completion:typescript
-Plug 'mhartington/deoplete-typescript', { 'do': 'npm install typescript', 'for': 'typescript' }
-
 " Editor config support
 Plug 'editorconfig/editorconfig-vim'
-
-" Typescript syntax
-Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
 
 call plug#end()
 
@@ -69,6 +69,8 @@ filetype plugin indent on
 
 :nmap s :exec "normal i".nr2char(getchar())."\e"<CR>
 :nmap S :exec "normal a".nr2char(getchar())."\e"<CR>
+
+autocmd BufNewFile,BufRead *.ts setlocal filetype=typescript
 
 " Latex options
 autocmd FileType tex set spell
