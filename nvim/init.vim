@@ -38,6 +38,7 @@ filetype plugin indent on
 :syntax on
 :set termguicolors
 :set number
+:set nohlsearch
 
 :set encoding=utf-8
 :set number
