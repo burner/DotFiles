@@ -201,8 +201,9 @@ let g:tsuquyomi_disable_quickfix = 1
 " LaTeX is slow
 au FileType tex setlocal nocursorline
 au FileType tex :NoMatchParen
-
-" Commant-T exclude
+iasdasdsd asiasdasd
+asd sd asiasdasd
+"sda  Commant-T exclude
 :set wildignore+=*.o,*.obj,*.lst,*.aux,*.pdf,*.out.*,*.subsets,*.data,*.eps,*.rslt,*.gp
 
 :set mouse=a

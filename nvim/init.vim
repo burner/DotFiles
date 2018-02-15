@@ -92,6 +92,8 @@ hi link EasyMotionTarget2Second ErrorMsg
 hi link EasyMotionShade  Comment
 
 :nmap h <Plug>(easymotion-prefix)
+:nmap <Leader>l <Plug>(easymotion-j)
+:nmap <Leader>k <Plug>(easymotion-k)
 
 " completion
 let g:deoplete#enable_at_startup = 1
@@ -110,7 +112,7 @@ let g:deoplete#sources#clang#flags = [ "--std=c++14" ]
 let g:deoplete#sources#d#dcd_server_autostart = 1
 
 " UltiSnips
-let g:UltiSnipsExpandTrigger="<c-u>"
+let g:UltiSnipsExpandTrigger="<c-k>"
 let g:UltiSnipsListSnippets="<c-s-p>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
