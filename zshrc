@@ -87,6 +87,7 @@ PROMPT="[%{$fg[red]%}%n%{$reset_color%}@%{$fg[blue]%}%m%{$reset_color%} %.]$ "
 #source /home/burner/.upsman/etc/profile
 
 PATH=$PATH:/home/burner/bin
+PATH=home/burner/.npm-global/bin:$PATH
 export PATH
 SVN_EDITOR=vim
 export SVN_EDITOR
