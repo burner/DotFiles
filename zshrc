@@ -88,7 +88,7 @@ PROMPT="[%{$fg[red]%}%n%{$reset_color%}@%{$fg[blue]%}%m%{$reset_color%} %.]$ "
 
 # gogs-cli
 PATH=$PATH:/home/burner/bin
-PATH=/home/burner/.npm-global/bin:$PATH
+PATH=~/npm-global/bin:$PATH
 export PATH
 SVN_EDITOR=vim
 export SVN_EDITOR
