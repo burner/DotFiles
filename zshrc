@@ -125,4 +125,5 @@ GCC_COLORS=auto
 export GCC_COLORS
 
 setopt HIST_IGNORE_ALL_DUPS
+export FZF_DEFAULT_COMMAND='fd --type f'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
