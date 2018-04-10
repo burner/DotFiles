@@ -86,8 +86,9 @@ PROMPT="[%{$fg[red]%}%n%{$reset_color%}@%{$fg[blue]%}%m%{$reset_color%} %.]$ "
 #source /home/burner/.zshenv
 #source /home/burner/.upsman/etc/profile
 
+# gogs-cli
 PATH=$PATH:/home/burner/bin
-PATH=home/burner/.npm-global/bin:$PATH
+PATH=/home/burner/.npm-global/bin:$PATH
 export PATH
 SVN_EDITOR=vim
 export SVN_EDITOR
@@ -128,3 +129,4 @@ export GCC_COLORS
 setopt HIST_IGNORE_ALL_DUPS
 export FZF_DEFAULT_COMMAND='fd --type f'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+

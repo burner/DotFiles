@@ -31,7 +31,6 @@ Plug 'editorconfig/editorconfig-vim'
 
 call plug#end()
 
-
 set laststatus=0
 
 filetype plugin indent on
@@ -99,7 +98,8 @@ hi link EasyMotionShade  Comment
 let g:deoplete#enable_at_startup = 1
 "let g:deoplete#complete_method = "complete"
 let g:deoplete#disable_auto_complete = 1
-inoremap <expr> <C-n>  deoplete#mappings#manual_complete()
+inoremap <expr> <C-n> deoplete#mappings#manual_complete()
+
 set completeopt-=preview
 
 " completion:c++
@@ -110,6 +110,8 @@ let g:deoplete#sources#clang#flags = [ "--std=c++14" ]
 
 " completion:dlang
 let g:deoplete#sources#d#dcd_server_autostart = 1
+let g:deoplete#sources#d#dcd_client_binary = '/usr/bin/dcd-client'
+let g:deoplete#sources#d#dcd_server_binary = '/usr/bin/dcd-server'
 
 " UltiSnips
 let g:UltiSnipsExpandTrigger="<c-k>"
