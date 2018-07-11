@@ -14,6 +14,9 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 " completion
 Plug 'Shougo/deoplete.nvim'
 
+" ctrlp
+Plug 'ctrlpvim/ctrlp.vim'
+
 " completion:c++
 Plug 'zchee/deoplete-clang', { 'for' : 'cpp' }
 
@@ -132,3 +135,9 @@ function! SearchMultiLine(bang, ...)
   endif
 endfunction
 command! -bang -nargs=* -complete=tag S call SearchMultiLine(<bang>0, <f-args>)|normal! /<C-R>/<CR>
+
+" CtrlP ctags
+nnoremap <leader>. :CtrlPTag<cr>
+
+:source ~/DotFiles/nvim/gentags.vim
+:map <F7> :call GenTags()<CR>
