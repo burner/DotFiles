@@ -136,8 +136,13 @@ function! SearchMultiLine(bang, ...)
 endfunction
 command! -bang -nargs=* -complete=tag S call SearchMultiLine(<bang>0, <f-args>)|normal! /<C-R>/<CR>
 
-" CtrlP ctags
-nnoremap <leader>. :CtrlPTag<cr>
+function! LazyP()
+  let g:ctrlp_default_input = expand('<cword>')
+  CtrlPTag
+  let g:ctrlp_default_input = ''
+endfunction
+command! LazyP call LazyP()
+nnoremap <leader>p :LazyP<CR>
 
 :source ~/DotFiles/nvim/gentags.vim
 :map <F7> :call GenTags()<CR>
