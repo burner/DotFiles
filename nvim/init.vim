@@ -139,5 +139,5 @@ command! -bang -nargs=* -complete=tag S call SearchMultiLine(<bang>0, <f-args>)|
 " CtrlP ctags
 nnoremap <leader>. :CtrlPTag<cr>
 
-:source ~/DotFiles/nvim/gentags.vim
-:map <F7> :call GenTags()<CR>
+" :source ~/DotFiles/nvim/gentags.vim
+" :map <F7> :call GenTags()<CR>
