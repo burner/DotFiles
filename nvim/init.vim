@@ -21,10 +21,10 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'zchee/deoplete-clang', { 'for' : 'cpp' }
 
 " Typescript syntax
- Plug 'leafgarland/typescript-vim'
+Plug 'leafgarland/typescript-vim'
 
 " completion:typescript
-Plug 'mhartington/nvim-typescript'
+Plug 'mhartington/nvim-typescript', {'for': ['typescript', 'tsx'], 'do': './install.sh' }
 
 " completion:dlang
 Plug 'landaire/deoplete-d'
