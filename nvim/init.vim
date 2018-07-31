@@ -142,7 +142,8 @@ function! LazyP()
   let g:ctrlp_default_input = ''
 endfunction
 command! LazyP call LazyP()
-nnoremap <leader>p :LazyP<CR>
+nnoremap <C-h> :call LazyP()<CR>
+nnoremap <leader>p :call LazyP()<CR>
 
 :source ~/DotFiles/nvim/gentags.vim
 :map <F7> :call GenTags()<CR>
