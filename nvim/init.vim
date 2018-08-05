@@ -24,7 +24,7 @@ Plug 'zchee/deoplete-clang', { 'for' : 'cpp' }
 Plug 'leafgarland/typescript-vim'
 
 " completion:typescript
-Plug 'mhartington/nvim-typescript', {'for': ['typescript', 'tsx'], 'do': './install.sh' }
+Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
 
 " completion:dlang
 Plug 'landaire/deoplete-d'
