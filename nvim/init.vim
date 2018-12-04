@@ -29,6 +29,9 @@ Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
 " completion:dlang
 Plug 'landaire/deoplete-d'
 
+" syntax:pug,jade,diet
+Plug 'digitaltoad/vim-pug'
+
 " Editor config support
 Plug 'editorconfig/editorconfig-vim'
 
@@ -81,6 +84,12 @@ autocmd FileType tex set spelllang=de,en_us
 autocmd FileType tex syntax spell toplevel
 autocmd FileType tex set nojoinspaces
 autocmd FileType tex setl noai nocin nosi inde=
+
+" dpp options
+autocmd BufReadPost *.dpp set syntax=d
+
+" diet options
+autocmd BufReadPost *.diet set syntax=pug
 
 :set mouse=a
 
