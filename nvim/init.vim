@@ -89,7 +89,7 @@ autocmd FileType tex setl noai nocin nosi inde=
 autocmd BufReadPost *.dpp set syntax=d
 
 " diet options
-autocmd BufReadPost *.diet set syntax=pug
+autocmd BufReadPost *.dt set syntax=pug
 
 :set mouse=a
 
