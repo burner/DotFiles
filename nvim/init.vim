@@ -11,11 +11,11 @@ Plug 'honza/vim-snippets'
 " fuzzy file finding
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
-" completion
-Plug 'Shougo/deoplete.nvim'
-
 " ctrlp
 Plug 'ctrlpvim/ctrlp.vim'
+
+" completion
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " completion:c++
 Plug 'zchee/deoplete-clang', { 'for' : 'cpp' }
