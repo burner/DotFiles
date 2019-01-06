@@ -37,6 +37,7 @@ Plug 'editorconfig/editorconfig-vim'
 
 call plug#end()
 
+colorscheme evening
 set laststatus=0
 
 filetype plugin indent on
