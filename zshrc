@@ -74,6 +74,9 @@ if (( ${+terminfo[smkx]} )) && (( ${+terminfo[rmkx]} )); then
     zle -N zle-line-finish
 fi
 
+[ -d ~/ldc2 ] && PATH=$PATH:/home/burner/ldc2/bin
+[ -d ~/Bin ] && PATH=$PATH:/home/burner/Bin
+
 autoload -U colors && colors
 
 alias ls='ls --color=auto'

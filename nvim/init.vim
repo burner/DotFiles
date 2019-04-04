@@ -14,6 +14,9 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 " ctrlp
 Plug 'ctrlpvim/ctrlp.vim'
 
+" ctrlp smarttab
+Plug 'DavidEGx/ctrlp-smarttabs'
+
 " completion
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
@@ -34,6 +37,12 @@ Plug 'digitaltoad/vim-pug'
 
 " Editor config support
 Plug 'editorconfig/editorconfig-vim'
+
+" Git
+Plug 'tpope/vim-fugitive'
+
+" Vue
+Plug 'posva/vim-vue'
 
 call plug#end()
 
@@ -123,8 +132,14 @@ let g:deoplete#sources#clang#flags = [ "--std=c++14" ]
 
 " completion:dlang
 let g:deoplete#sources#d#dcd_server_autostart = 1
-let g:deoplete#sources#d#dcd_client_binary = '/usr/bin/dcd-client'
-let g:deoplete#sources#d#dcd_server_binary = '/usr/bin/dcd-server'
+if filereadable('/home/burner/Bin/dcd-client')
+	let g:deoplete#sources#d#dcd_client_binary = '/home/burner/Bin/dcd-client'
+	let g:deoplete#sources#d#dcd_server_binary = '/home/burner/Bin/dcd-server'
+else
+	let g:deoplete#sources#d#dcd_client_binary = '/usr/bin/dcd-client'
+	let g:deoplete#sources#d#dcd_server_binary = '/usr/bin/dcd-server'
+endif
+let g:dutyl_stdImportPaths=['/usr/include/dlang/dmd', '/usr/include/dmd/phobos', '/usr/include/dmd/druntime']
 
 " UltiSnips
 let g:UltiSnipsExpandTrigger="<c-k>"
@@ -157,3 +172,10 @@ nnoremap <leader>p :call LazyP()<CR>
 
 :source ~/DotFiles/nvim/gentags.vim
 :map <F7> :call GenTags()<CR>
+
+" Diff options
+set diffopt+=vertical
+
+" Smart tab
+let g:ctrlp_extensions = ['smarttabs']
+nnoremap <leader>b :CtrlPSmartTabs<CR>
