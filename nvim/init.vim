@@ -179,3 +179,6 @@ set diffopt+=vertical
 " Smart tab
 let g:ctrlp_extensions = ['smarttabs']
 nnoremap <leader>b :CtrlPSmartTabs<CR>
+let g:ctrlp_smarttabs_modify_tabline = 0
+let g:ctrlp_smarttabs_reverse = 0
+let g:ctrlp_smarttabs_exclude_quickfix = 0
