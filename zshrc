@@ -90,7 +90,7 @@ PROMPT="[%{$fg[red]%}%n%{$reset_color%}@%{$fg[blue]%}%m%{$reset_color%} %.]$ "
 #source /home/burner/.upsman/etc/profile
 
 # gogs-cli
-PATH=$PATH:/home/burner/bin:/home/burner/.dub/packages/dpp-0.0.5/dpp/bin/
+PATH=$PATH:/home/burner/bin:/home/burner/.dub/packages/dpp-0.2.1/dpp/bin/
 PATH=~/npm-global/bin:$PATH
 export PATH
 SVN_EDITOR=vim
