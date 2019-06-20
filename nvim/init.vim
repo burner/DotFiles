@@ -30,7 +30,11 @@ Plug 'leafgarland/typescript-vim'
 Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
 
 " completion:dlang
-Plug 'landaire/deoplete-d'
+"Plug 'landaire/deoplete-d'
+Plug 'monkoose/deoplete-d'
+
+" completion:dlang
+"Plug 'idanarye/vim-dutyl'
 
 " syntax:pug,jade,diet
 Plug 'digitaltoad/vim-pug'
@@ -43,6 +47,9 @@ Plug 'tpope/vim-fugitive'
 
 " Vue
 Plug 'posva/vim-vue'
+
+" Elm
+Plug 'elmcast/elm-vim'
 
 call plug#end()
 
@@ -131,15 +138,11 @@ let g:deoplete#sources#clang#clang_header = '/usr/lib/clang'
 let g:deoplete#sources#clang#flags = [ "--std=c++14" ]
 
 " completion:dlang
+let g:deoplete#sources#d#dcd_client_binary = '/usr/bin/dcd-client'
+let g:deoplete#sources#d#dcd_server_binary = '/usr/bin/dcd-server'
+let g:deoplete#sources#d#dcd_server_binary = '/usr/bin/dcd-server'
 let g:deoplete#sources#d#dcd_server_autostart = 1
-if filereadable('/home/burner/Bin/dcd-client')
-	let g:deoplete#sources#d#dcd_client_binary = '/home/burner/Bin/dcd-client'
-	let g:deoplete#sources#d#dcd_server_binary = '/home/burner/Bin/dcd-server'
-else
-	let g:deoplete#sources#d#dcd_client_binary = '/usr/bin/dcd-client'
-	let g:deoplete#sources#d#dcd_server_binary = '/usr/bin/dcd-server'
-endif
-let g:dutyl_stdImportPaths=['/usr/include/dlang/dmd', '/usr/include/dmd/phobos', '/usr/include/dmd/druntime']
+let g:deoplete#sources#d#load_dub = 1
 
 " UltiSnips
 let g:UltiSnipsExpandTrigger="<c-k>"
