@@ -31,10 +31,7 @@ Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
 
 " completion:dlang
 "Plug 'landaire/deoplete-d'
-Plug 'monkoose/deoplete-d'
-
-" completion:dlang
-"Plug 'idanarye/vim-dutyl'
+Plug 'monkoose/deoplete-d', { 'for' : 'd' }
 
 " syntax:pug,jade,diet
 Plug 'digitaltoad/vim-pug'
@@ -139,7 +136,6 @@ let g:deoplete#sources#clang#flags = [ "--std=c++14" ]
 
 " completion:dlang
 let g:deoplete#sources#d#dcd_client_binary = '/usr/bin/dcd-client'
-let g:deoplete#sources#d#dcd_server_binary = '/usr/bin/dcd-server'
 let g:deoplete#sources#d#dcd_server_binary = '/usr/bin/dcd-server'
 let g:deoplete#sources#d#dcd_server_autostart = 1
 let g:deoplete#sources#d#load_dub = 1
