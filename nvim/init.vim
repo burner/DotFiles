@@ -36,6 +36,9 @@ Plug 'monkoose/deoplete-d', { 'for' : 'd' }
 " syntax:pug,jade,diet
 Plug 'digitaltoad/vim-pug'
 
+" svelte
+Plug 'burner/vim-svelte'
+
 " Editor config support
 Plug 'editorconfig/editorconfig-vim'
 
