@@ -141,6 +141,7 @@ let g:deoplete#sources#clang#flags = [ "--std=c++14" ]
 let g:deoplete#sources#d#dcd_client_binary = '/usr/bin/dcd-client'
 let g:deoplete#sources#d#dcd_server_binary = '/usr/bin/dcd-server'
 let g:deoplete#sources#d#dcd_server_autostart = 1
+let g:deoplete#sources#d#load_dub = 1
 
 " UltiSnips
 let g:UltiSnipsExpandTrigger="<c-k>"
