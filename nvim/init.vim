@@ -27,7 +27,9 @@ Plug 'zchee/deoplete-clang', { 'for' : 'cpp' }
 Plug 'leafgarland/typescript-vim'
 
 " completion:typescript
+Plug 'HerringtonDarkholme/yats.vim'
 Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
+Plug 'Shougo/denite.nvim'
 
 " completion:dlang
 "Plug 'landaire/deoplete-d'
