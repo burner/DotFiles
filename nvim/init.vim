@@ -127,7 +127,7 @@ hi link EasyMotionShade  Comment
 let g:deoplete#enable_at_startup = 1
 "let g:deoplete#complete_method = "complete"
 let g:deoplete#disable_auto_complete = 1
-inoremap <expr> <C-n> deoplete#mappings#manual_complete()
+inoremap <expr> <C-n> deoplete#manual_complete()
 
 set completeopt-=preview
 
