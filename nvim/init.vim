@@ -48,6 +48,9 @@ Plug 'posva/vim-vue'
 " Elm
 Plug 'elmcast/elm-vim'
 
+" Svelte
+Plug 'burner/vim-svelte'
+
 call plug#end()
 
 colorscheme evening
