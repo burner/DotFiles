@@ -12,6 +12,8 @@ bindkey -e
 
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
+setopt no_complete_aliases
+setopt prompt_subst
 zstyle ':completion:*' use-cache on
 zstyle ':completion:*' cache-path ~/.zsh/cache 
 zstyle :compinstall filename '/home/burner/.zshrc'
@@ -140,7 +142,7 @@ function taskwarriorcaller() {
   ~/DotFiles/tasksync.sh
 }
 
-alias t='taskwarriorcaller'
+#alias t='taskwarriorcaller'
 
 source ~/DotFiles/bash_colours
 TICK="✓"
@@ -149,7 +151,6 @@ CROSS="✗"
 URGENT="❗"
 OVERDUE="☠️"
 DUETODAY="😱"
-TASKDINDICATOR=
 
 function task_indicator {
     if [ `task +READY +OVERDUE count` -gt "0" ]; then
@@ -164,9 +165,15 @@ function task_indicator {
 }
 
 # prompt
-setopt prompt_subst
 
 add-zsh-hook precmd task_indicator
 setopt PROMPT_SUBST
 PS1=${PROMPT}
 
+zstyle ':completion:*:*:task:*' verbose yes
+zstyle ':completion:*:*:task:*:descriptions' format '%U%B%d%b%u'
+
+zstyle ':completion:*:*:task:*' group-name ''
+
+alias t='taskwarriorcaller'
+compdef _task taskwarriorcaller=task
