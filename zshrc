@@ -153,16 +153,12 @@ TASKDINDICATOR=
 
 function task_indicator {
     if [ `task +READY +OVERDUE count` -gt "0" ]; then
-        echo "$OVERDUE"
 		PROMPT="[%{$fg[red]%}%n%{$reset_color%}@%{$fg[blue]%}%m%{$reset_color%} %.]${OVERDUE} "
     elif [ `task +READY +DUETODAY count` -gt "0" ]; then
-        echo "$DUETODAY"
 		PROMPT="[%{$fg[red]%}%n%{$reset_color%}@%{$fg[blue]%}%m%{$reset_color%} %.]${DUETODAY} "
     elif [ `task +READY urgency \> 10 count` -gt "0" ]; then
-        echo "URGENT"
 		PROMPT="[%{$fg[red]%}%n%{$reset_color%}@%{$fg[blue]%}%m%{$reset_color%} %.]${URGENT} "
     else
-        echo '$'
 		PROMPT="[%{$fg[red]%}%n%{$reset_color%}@%{$fg[blue]%}%m%{$reset_color%} %.]\$ "
     fi
 }
