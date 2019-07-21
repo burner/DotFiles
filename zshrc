@@ -17,7 +17,7 @@ zstyle ':completion:*' cache-path ~/.zsh/cache
 zstyle :compinstall filename '/home/burner/.zshrc'
 zstyle ':completion:*' completer _expand _complete _ignored
 
-autoload -Uz compinit promptinit
+autoload -Uz compinit promptinit add-zsh-hook
 compinit
 # End of lines added by compinstall
 
@@ -83,8 +83,6 @@ alias ls='ls --color=auto'
 alias ll='ls --color=auto -alh'
 alias lrt='ls --color=auto -alhrt'
 #alias thunar=' thunar `pwd`'
-# prompt
-PROMPT="[%{$fg[red]%}%n%{$reset_color%}@%{$fg[blue]%}%m%{$reset_color%} %.]$ "
 
 #source /home/burner/.zshenv
 #source /home/burner/.upsman/etc/profile
@@ -143,3 +141,36 @@ function taskwarriorcaller() {
 }
 
 alias t='taskwarriorcaller'
+
+source ~/DotFiles/bash_colours
+TICK="✓"
+CROSS="✗"
+
+URGENT="❗"
+OVERDUE="☠️"
+DUETODAY="😱"
+TASKDINDICATOR=
+
+function task_indicator {
+    if [ `task +READY +OVERDUE count` -gt "0" ]; then
+        echo "$OVERDUE"
+		PROMPT="[%{$fg[red]%}%n%{$reset_color%}@%{$fg[blue]%}%m%{$reset_color%} %.]${OVERDUE} "
+    elif [ `task +READY +DUETODAY count` -gt "0" ]; then
+        echo "$DUETODAY"
+		PROMPT="[%{$fg[red]%}%n%{$reset_color%}@%{$fg[blue]%}%m%{$reset_color%} %.]${DUETODAY} "
+    elif [ `task +READY urgency \> 10 count` -gt "0" ]; then
+        echo "URGENT"
+		PROMPT="[%{$fg[red]%}%n%{$reset_color%}@%{$fg[blue]%}%m%{$reset_color%} %.]${URGENT} "
+    else
+        echo '$'
+		PROMPT="[%{$fg[red]%}%n%{$reset_color%}@%{$fg[blue]%}%m%{$reset_color%} %.]\$ "
+    fi
+}
+
+# prompt
+setopt prompt_subst
+
+add-zsh-hook precmd task_indicator
+setopt PROMPT_SUBST
+PS1=${PROMPT}
+
