@@ -110,7 +110,7 @@ select-word-style bash
 alias ...=../..
 alias ....=../../..
 alias .....=../../../..
-alias grepr='grep -R'
+alias grepr='grep -n -R'
 
 # Git Aliases
 alias g=git

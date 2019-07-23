@@ -1,15 +1,38 @@
 {
 	"languageserver": {
-	  "ccls": {
-	    "command": "ccls",
-	    "filetypes": ["c", "cpp", "objc", "objcpp"],
-	    "rootPatterns": [".ccls", "compile_commands.json", ".vim/", ".git/", ".hg/"],
-	    "initializationOptions": {
-	       "cache": {
-	         "directory": "/tmp/ccls"
-	       }
-	     }
-	  }
+		"ccls": {
+			"command": "ccls",
+			"filetypes": ["c", "cpp", "objc", "objcpp"],
+			"rootPatterns": [".ccls", "compile_commands.json", ".vim/", ".git/", ".hg/"],
+			"initializationOptions": {
+				 "cache": {
+					 "directory": "/tmp/ccls"
+				 }
+			 }
+		},
+		"d": {
+			"command": "/home/burner/.dub/packages/.bin/dls-latest/dls",
+			"args": ["--stdio"],
+			"filetypes": ["d"],
+			"trace.server": "on",
+			"rootPatterns": ["dub.json", "dub.sdl"],
+			"initializationOptions": {
+			},
+			"settings": {
+			}
+		},
+		"elmLS": {
+			"command": "elm-language-server",
+			"args": ["--stdio"],
+			"filetypes": ["elm"],
+			"rootPatterns": ["elm.json"],
+			"initializationOptions": {
+				"runtime": "node",
+				"elmPath": "elm",
+				"elmFormatPath": "elm-format",
+				"elmTestPath": "elm-test"
+			}
+		}
 	},
 	"suggest.autoTrigger": "none"
 }

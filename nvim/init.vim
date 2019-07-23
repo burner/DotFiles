@@ -19,6 +19,7 @@ Plug 'DavidEGx/ctrlp-smarttabs'
 
 " coc
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'd-language-server/vscode-dlang' , {'do': 'yarn install --frozen-lockfile'}
 
 "" Typescript syntax
 Plug 'leafgarland/typescript-vim'
@@ -27,8 +28,8 @@ Plug 'leafgarland/typescript-vim'
 Plug 'HerringtonDarkholme/yats.vim'
 
 "" completion:dlang
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'monkoose/deoplete-d', { 'for' : 'd' }
+"Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+"Plug 'monkoose/deoplete-d', { 'for' : 'd' }
 
 " syntax:pug,jade,diet
 Plug 'digitaltoad/vim-pug'
