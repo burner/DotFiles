@@ -11,8 +11,8 @@
 			 }
 		},
 		"d": {
-			"command": "/home/burner/.dub/packages/.bin/dls-latest/dls",
-			"args": ["--stdio"],
+			"command": "/home/burner/.dub/packages/serve-d-0.4.1/serve-d/serve-d",
+			"args": [],
 			"filetypes": ["d"],
 			"trace.server": "on",
 			"rootPatterns": ["dub.json", "dub.sdl"],

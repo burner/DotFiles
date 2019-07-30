@@ -19,7 +19,7 @@ Plug 'DavidEGx/ctrlp-smarttabs'
 
 " coc
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'd-language-server/vscode-dlang' , {'do': 'yarn install --frozen-lockfile'}
+"Plug 'd-language-server/vscode-dlang' , {'do': 'yarn install --frozen-lockfile'}
 
 "" Typescript syntax
 Plug 'leafgarland/typescript-vim'
