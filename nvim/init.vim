@@ -315,3 +315,6 @@ nnoremap <leader>b :CtrlPSmartTabs<CR>
 let g:ctrlp_smarttabs_modify_tabline = 0
 let g:ctrlp_smarttabs_reverse = 0
 let g:ctrlp_smarttabs_exclude_quickfix = 0
+
+" Fix highlighting
+let c_minlines=500

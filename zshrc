@@ -125,6 +125,7 @@ alias glu='git pull --rebase upstream master'
 alias gp='git push'
 alias gr='git reset --hard'
 alias gt='git commit -a'
+alias gm='git merge'
 
 GCC_COLORS=auto
 export GCC_COLORS
