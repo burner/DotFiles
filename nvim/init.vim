@@ -73,11 +73,13 @@ filetype plugin indent on
 :map l <DOWN>
 :map ö <RIGHT>
 
-:nnoremap <S-k> :tabm -1<cr>
-:nnoremap <S-l> :tabm +1<cr>
+" Move tabs
+:nnoremap <A-j> :tabm -1<cr>
+:nnoremap <A-ö> :tabm +1<cr>
+
+" Go to next/previous tab
 :map <c-k> gT
 :map <c-l> gt
-
 
 :nnoremap <C-s> :w<CR>
 :nnoremap <C-n> :w<CR> :!make<CR>

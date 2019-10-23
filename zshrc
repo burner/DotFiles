@@ -96,6 +96,7 @@ export PATH
 SVN_EDITOR=vim
 export SVN_EDITOR
 ulimit -c unlimited
+export EDITOR=nvim
 
 alias vim="stty stop '' -ixoff ; vim 2>/dev/null"
 # `Frozing' tty, so after any command terminal settings will be restored
