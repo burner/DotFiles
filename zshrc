@@ -102,6 +102,7 @@ alias vim="stty stop '' -ixoff ; vim 2>/dev/null"
 # `Frozing' tty, so after any command terminal settings will be restored
 ttyctl -f
 setxkbmap -option caps:escape
+setxkbmap de
 
 autoload -U select-word-style
 select-word-style bash
