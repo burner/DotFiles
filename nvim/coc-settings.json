@@ -5,16 +5,16 @@
 			"filetypes": ["c", "cpp", "objc", "objcpp"],
 			"rootPatterns": [".ccls", "compile_commands.json", ".vim/", ".git/", ".hg/"],
 			"initializationOptions": {
-				 "cache": {
-					 "directory": "/tmp/ccls"
-				 }
-			 }
+				"cache": {
+					"directory": "/tmp/ccls"
+				}
+			}
 		},
 		"d": {
-			"command": "/home/burner/.dub/packages/serve-d-0.4.1/serve-d/serve-d",
-			"args": [],
+			"command": "/home/burner/.dub/packages/.bin/dls-latest/dls", 
+			"args": ["--stdio"],
 			"filetypes": ["d"],
-			"trace.server": "on",
+			"trace.server": "off",
 			"rootPatterns": ["dub.json", "dub.sdl"],
 			"initializationOptions": {
 			},
