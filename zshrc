@@ -153,7 +153,7 @@ CROSS="✗"
 
 URGENT="❗"
 OVERDUE="☠️"
-DUETODAY="😱"
+DUETODAY="💩"
 
 function task_indicator {
     if [ `task +READY +OVERDUE count` -gt "0" ]; then
