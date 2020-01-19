@@ -52,6 +52,9 @@ Plug 'elmcast/elm-vim'
 " Svelte
 Plug 'burner/vim-svelte'
 
+" Dart
+Plug 'dart-lang/dart-vim-plugin'
+
 call plug#end()
 
 colorscheme evening
