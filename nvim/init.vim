@@ -31,6 +31,9 @@ Plug 'HerringtonDarkholme/yats.vim'
 "Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 "Plug 'monkoose/deoplete-d', { 'for' : 'd' }
 
+" Dart
+Plug 'dart-lang/dart-vim-plugin'
+
 " syntax:pug,jade,diet
 Plug 'digitaltoad/vim-pug'
 
