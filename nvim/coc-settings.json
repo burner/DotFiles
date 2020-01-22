@@ -32,6 +32,16 @@
 				"elmFormatPath": "elm-format",
 				"elmTestPath": "elm-test"
 			}
+		},
+		"dart": {
+			"command": "dart",
+			"args": [
+				"/home/burner/.pub-cache/bin/dart_language_server",
+				"--lsp"
+			],
+			"filetypes": ["dart"],
+			"disableDynamicRegister": true,
+			"trace.server": "verbose"
 		}
 	},
 	"suggest.autoTrigger": "none",
