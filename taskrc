@@ -34,3 +34,4 @@ taskd.credentials=Public\/burner\/3cb20008-0b2d-4cb7-b438-14e2d2e8b5db
 taskd.certificate=\/home\/burner\/DotFiles\/taskwarrior\/burner_task.cert.pem
 taskd.key=\/home\/burner\/DotFiles\/taskwarrior\/burner_task.key.pem
 taskd.ca=\/home\/burner\/DotFiles\/taskwarrior\/ca.cert.pem
+alias.annotate=an
