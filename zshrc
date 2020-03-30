@@ -126,7 +126,8 @@ alias glo='git pull --rebase origin master'
 alias glu='git pull --rebase upstream master'
 alias gp='git push'
 alias gr='git reset --hard'
-alias gt='git commit -a'
+alias gt='git commit'
+alias gta='git commit -a'
 alias gm='git merge'
 
 GCC_COLORS=auto
@@ -180,3 +181,14 @@ zstyle ':completion:*:*:task:*' group-name ''
 
 alias t='taskwarriorcaller'
 compdef _task taskwarriorcaller=task
+
+# Flutter, Android
+export FLUTTER_ROOT=/home/burner/Workspace/Flutter/flutter/
+export ANDROID_STUDIO=/home/burner/Workspace/Flutter/android-studio/
+export ANDROID_SDK_ROOT=/home/burner/Workspace/Flutter/sdk/
+export ANDROID_NDK_ROOT=/home/burner/Workspace/Flutter/android-ndk-r21/
+export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
+export PATH=$PATH:$ANDROID_SDK_ROOT/tools
+export PATH=$PATH:$ANDROID_STUDIO/bin
+export PATH=$PATH:$FLUTTER_ROOT/bin
+export PATH=$PATH:$ANDROID_NDK
