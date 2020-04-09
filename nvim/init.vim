@@ -60,6 +60,8 @@ Plug 'dart-lang/dart-vim-plugin'
 
 call plug#end()
 
+autocmd FileType gitcommit setlocal spell
+
 colorscheme evening
 set laststatus=0
 
