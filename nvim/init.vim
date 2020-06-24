@@ -20,7 +20,7 @@ Plug 'DavidEGx/ctrlp-smarttabs'
 " coc
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "Plug 'd-language-server/vscode-dlang' , {'do': 'yarn install --frozen-lockfile'}
-
+"
 "" Typescript syntax
 Plug 'leafgarland/typescript-vim'
 
@@ -29,7 +29,7 @@ Plug 'HerringtonDarkholme/yats.vim'
 
 "" completion:dlang
 "Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-"Plug 'monkoose/deoplete-d', { 'for' : 'd' }
+"Plug 'landaire/deoplete-d'
 
 " Dart
 Plug 'dart-lang/dart-vim-plugin'
@@ -264,25 +264,28 @@ nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 " COC END
 "
 
-" completion
+"" completion
 "let g:deoplete#enable_at_startup = 1
-""let g:deoplete#complete_method = "complete"
+"let g:deoplete#complete_method = "complete"
 "let g:deoplete#disable_auto_complete = 1
 "inoremap <expr> <C-n> deoplete#manual_complete()
-"
-"set completeopt-=preview
-"
-"" completion:c++
-"let g:deoplete#sources#clang#libclang_path = '/usr/lib/libclang.so'
-"let g:deoplete#sources#clang#std#cpp = 'c++14'
-"let g:deoplete#sources#clang#clang_header = '/usr/lib/clang'
-"let g:deoplete#sources#clang#flags = [ "--std=c++14" ]
-"
-"" completion:dlang
+""
+""set completeopt-=preview
+""
+""" completion:c++
+""let g:deoplete#sources#clang#libclang_path = '/usr/lib/libclang.so'
+""let g:deoplete#sources#clang#std#cpp = 'c++14'
+""let g:deoplete#sources#clang#clang_header = '/usr/lib/clang'
+""let g:deoplete#sources#clang#flags = [ "--std=c++14" ]
+""
+""" completion:dlang
 "let g:deoplete#sources#d#dcd_client_binary = '/usr/bin/dcd-client'
 "let g:deoplete#sources#d#dcd_server_binary = '/usr/bin/dcd-server'
 "let g:deoplete#sources#d#dcd_server_autostart = 1
 "let g:deoplete#sources#d#load_dub = 1
+"let g:deoplete#check_stderr = 0
+"let completeopt-=preview
+
 
 " UltiSnips
 let g:UltiSnipsExpandTrigger="<c-k>"

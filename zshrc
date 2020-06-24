@@ -84,6 +84,7 @@ autoload -U colors && colors
 alias ls='ls --color=auto'
 alias ll='ls --color=auto -alh'
 alias lrt='ls --color=auto -alhrt'
+alias psa='ps aux | grep'
 #alias thunar=' thunar `pwd`'
 
 #source /home/burner/.zshenv
@@ -152,7 +153,7 @@ source ~/DotFiles/bash_colours
 TICK="✓"
 CROSS="✗"
 
-URGENT="❗"
+URGENT="!"
 OVERDUE="☠️"
 DUETODAY="💩"
 
@@ -180,6 +181,7 @@ zstyle ':completion:*:*:task:*:descriptions' format '%U%B%d%b%u'
 zstyle ':completion:*:*:task:*' group-name ''
 
 alias t='taskwarriorcaller'
+alias tn='taskwarriorcaller pro:Work'
 compdef _task taskwarriorcaller=task
 
 # Flutter, Android

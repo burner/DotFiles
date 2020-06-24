@@ -11,10 +11,10 @@
 			}
 		},
 		"d": {
-			"command": "/home/burner/.dub/packages/.bin/dls-latest/dls", 
+			"command": "/home/burner/.dub/packages/dls-0.26.2/dls/dls",
 			"args": ["--stdio"],
 			"filetypes": ["d"],
-			"trace.server": "off",
+			"trace.server": "on",
 			"rootPatterns": ["dub.json", "dub.sdl"],
 			"initializationOptions": {
 			},
