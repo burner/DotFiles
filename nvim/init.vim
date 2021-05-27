@@ -55,8 +55,8 @@ Plug 'elmcast/elm-vim'
 " Svelte
 Plug 'burner/vim-svelte'
 
-" Dart
-Plug 'dart-lang/dart-vim-plugin'
+" Openscad
+Plug 'sirtaj/vim-openscad'
 
 call plug#end()
 
@@ -349,3 +349,6 @@ function SelectIndent()
   exe "normal " . line . "G"
 endfunction
 nnoremap vii :call SelectIndent()<CR>
+
+" Syntax highlighting more characters
+:set synmaxcol=6000

@@ -130,6 +130,7 @@ alias gr='git reset --hard'
 alias gt='git commit'
 alias gta='git commit -a'
 alias gm='git merge'
+alias grm='gc master && git fetch && git reset --hard origin/master'
 
 GCC_COLORS=auto
 export GCC_COLORS
@@ -185,12 +186,11 @@ alias tn='taskwarriorcaller pro:Work'
 compdef _task taskwarriorcaller=task
 
 # Flutter, Android
-export FLUTTER_ROOT=/home/burner/Workspace/Flutter/flutter/
-export ANDROID_STUDIO=/home/burner/Workspace/Flutter/android-studio/
-export ANDROID_SDK_ROOT=/home/burner/Workspace/Flutter/sdk/
-export ANDROID_NDK_ROOT=/home/burner/Workspace/Flutter/android-ndk-r21/
-export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
-export PATH=$PATH:$ANDROID_SDK_ROOT/tools
-export PATH=$PATH:$ANDROID_STUDIO/bin
-export PATH=$PATH:$FLUTTER_ROOT/bin
-export PATH=$PATH:$ANDROID_NDK
+export PATH=$PATH:/home/burner/Downloads/flutter/bin/
+export CHROME_EXECUTABLE=/opt/google/chrome/chrome
+
+# Increase the stack
+ulimit -S -s 1310720	
+
+# Slic3r
+alias slic3r=/home/burner/Slic3r/PrusaSlicer-2.2.0+linux-x64-202003211856/prusa-slicer

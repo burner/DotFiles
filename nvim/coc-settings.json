@@ -45,5 +45,5 @@
 		}
 	},
 	"suggest.autoTrigger": "none",
-	"coc.preferences.noselect": false
+	"suggest.noselect": false
 }
