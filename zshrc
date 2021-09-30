@@ -136,8 +136,9 @@ GCC_COLORS=auto
 export GCC_COLORS
 
 setopt HIST_IGNORE_ALL_DUPS
-export FZF_DEFAULT_COMMAND='fd --type f'
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+#export FZF_DEFAULT_COMMAND='fd --type f'
+export FZF_DEFAULT_COMMAND='rg --files --no-ignore-vcs --hidden'
+#[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 #
 # TaskWarrior

@@ -9,7 +9,8 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
 " fuzzy file finding
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 " ctrlp
 Plug 'ctrlpvim/ctrlp.vim'
@@ -58,6 +59,10 @@ Plug 'burner/vim-svelte'
 " Openscad
 Plug 'sirtaj/vim-openscad'
 
+" run :MarkdownPreview to preview markdown
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+
+
 call plug#end()
 
 autocmd FileType gitcommit setlocal spell
@@ -67,6 +72,9 @@ set laststatus=0
 
 filetype plugin indent on
 :syntax on
+:syntax sync fromstart
+:set synmaxcol=9000
+
 :set termguicolors
 :set number
 :set nohlsearch
@@ -122,7 +130,8 @@ autocmd BufReadPost *.dt set syntax=pug
 :set mouse=a
 
 " Fuzzy File Finder
-:map <leader>t :FZF<CR>
+:map <leader>f :FZF<CR>
+:nnoremap <silent> <Leader>g :Rg<CR>
 
 " EasyMotion
 hi link EasyMotionTarget ErrorMsg
@@ -205,8 +214,8 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 nmap <leader>rn <Plug>(coc-rename)
 
 " Remap for format selected region
-xmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
+""" xmap <leader>f  <Plug>(coc-format-selected)
+""" nmap <leader>f  <Plug>(coc-format-selected)
 
 augroup mygroup
   autocmd!
