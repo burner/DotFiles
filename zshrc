@@ -76,9 +76,6 @@ if (( ${+terminfo[smkx]} )) && (( ${+terminfo[rmkx]} )); then
     zle -N zle-line-finish
 fi
 
-[ -d ~/ldc2 ] && PATH=$PATH:/home/burner/ldc2/bin
-[ -d ~/Bin ] && PATH=$PATH:/home/burner/Bin
-
 autoload -U colors && colors
 
 alias ls='ls --color=auto'
@@ -91,7 +88,6 @@ alias psa='ps aux | grep'
 #source /home/burner/.upsman/etc/profile
 
 # gogs-cli
-PATH=$PATH:/home/burner/bin:/home/burner/.dub/packages/dpp-0.2.1/dpp/bin/
 PATH=~/npm-global/bin:$PATH
 export PATH
 SVN_EDITOR=vim
@@ -137,7 +133,7 @@ export GCC_COLORS
 
 setopt HIST_IGNORE_ALL_DUPS
 #export FZF_DEFAULT_COMMAND='fd --type f'
-export FZF_DEFAULT_COMMAND='rg --files --no-ignore-vcs --hidden'
+export FZF_DEFAULT_COMMAND='rg --files --hidden'
 #[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 #
@@ -185,10 +181,6 @@ zstyle ':completion:*:*:task:*' group-name ''
 alias t='taskwarriorcaller'
 alias tn='taskwarriorcaller pro:Work'
 compdef _task taskwarriorcaller=task
-
-# Flutter, Android
-export PATH=$PATH:/home/burner/Downloads/flutter/bin/
-export CHROME_EXECUTABLE=/opt/google/chrome/chrome
 
 # Increase the stack
 ulimit -S -s 1310720	
