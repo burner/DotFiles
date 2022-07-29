@@ -10,16 +10,6 @@
 				}
 			}
 		},
-		"d": {
-			"command": "/home/burner/.dub/packages/serve-d-0.7.0-beta.7/serve-d/serve-d",
-			"filetypes": ["d"],
-			"trace.server": "on",
-			"rootPatterns": ["dub.json", "dub.sdl"],
-			"initializationOptions": {
-			},
-			"settings": {
-			}
-		},
 		"elmLS": {
 			"command": "elm-language-server",
 			"args": ["--stdio"],

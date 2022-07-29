@@ -1,11 +1,7 @@
 # Lines configured by zsh-newuser-install
-function newTerm() {
-    /usr/bin/alacritty --working-directory $PWD&disown
-}
-
 HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=500000
+SAVEHIST=500000
 setopt appendhistory autocd extendedglob nomatch
 unsetopt beep notify
 bindkey -e
@@ -89,6 +85,7 @@ alias psa='ps aux | grep'
 
 # gogs-cli
 PATH=~/npm-global/bin:$PATH
+PATH=~/bin:$PATH
 export PATH
 SVN_EDITOR=vim
 export SVN_EDITOR
@@ -115,6 +112,7 @@ alias grepr='grep -n -R'
 alias g=git
 alias ga='git add'
 alias gb='git branch'
+alias gbs='git branch --sort=committerdate'
 alias gc='git checkout'
 alias ge='git rebase'
 alias gf='git fetch --all'
