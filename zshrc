@@ -95,8 +95,11 @@ export EDITOR=nvim
 alias vim="stty stop '' -ixoff ; vim 2>/dev/null"
 # `Frozing' tty, so after any command terminal settings will be restored
 ttyctl -f
+if [[ "$XDG_SESSION_TYPE" == "x11" ]]
+then
 setxkbmap -option caps:escape
 setxkbmap de
+fi
 
 autoload -U select-word-style
 select-word-style bash
@@ -138,13 +141,6 @@ export FZF_DEFAULT_COMMAND='rg --files --hidden'
 # TaskWarrior
 #
 
-function taskwarriorcaller() {
-  task $@
-  ~/DotFiles/tasksync.sh
-}
-
-#alias t='taskwarriorcaller'
-
 source ~/DotFiles/bash_colours
 TICK="✓"
 CROSS="✗"
@@ -153,21 +149,8 @@ URGENT="!"
 OVERDUE="☠️"
 DUETODAY="💩"
 
-function task_indicator {
-    if [ `task +READY +OVERDUE count` -gt "0" ]; then
-		PROMPT="[%{$fg[red]%}%n%{$reset_color%}@%{$fg[blue]%}%m%{$reset_color%} %.]${OVERDUE} "
-    elif [ `task +READY +DUETODAY count` -gt "0" ]; then
-		PROMPT="[%{$fg[red]%}%n%{$reset_color%}@%{$fg[blue]%}%m%{$reset_color%} %.]${DUETODAY} "
-    elif [ `task +READY urgency \> 10 count` -gt "0" ]; then
-		PROMPT="[%{$fg[red]%}%n%{$reset_color%}@%{$fg[blue]%}%m%{$reset_color%} %.]${URGENT} "
-    else
-		PROMPT="[%{$fg[red]%}%n%{$reset_color%}@%{$fg[blue]%}%m%{$reset_color%} %.]\$ "
-    fi
-}
-
 # prompt
-
-add-zsh-hook precmd task_indicator
+PROMPT="[%{$fg[red]%}%n%{$reset_color%}@%{$fg[blue]%}%m%{$reset_color%} %.]\$ "
 setopt PROMPT_SUBST
 PS1=${PROMPT}
 
