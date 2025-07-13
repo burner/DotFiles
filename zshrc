@@ -85,7 +85,7 @@ alias psa='ps aux | grep'
 
 # gogs-cli
 PATH=~/npm-global/bin:$PATH
-PATH=~/bin:$PATH
+PATH=/opt/flutter/bin:~/bin:$PATH
 export PATH
 SVN_EDITOR=vim
 export SVN_EDITOR
@@ -137,9 +137,7 @@ setopt HIST_IGNORE_ALL_DUPS
 export FZF_DEFAULT_COMMAND='rg --files --hidden'
 #[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-#
-# TaskWarrior
-#
+source /etc/profile.d/vte.sh
 
 source ~/DotFiles/bash_colours
 TICK="✓"
